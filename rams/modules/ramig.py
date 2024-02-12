@@ -25,7 +25,7 @@ from rams import CMD_HELP
 from rams.utils import edit_delete, edit_or_reply, ram_cmd as tod
 
 
-@tod(pattern="sosmed(?: |$)(.*)")
+@tod(pattern="ig(?: |$)(.*)")
 async def insta(event):
     xxnx = event.pattern_match.group(1)
     if xxnx:
@@ -35,7 +35,7 @@ async def insta(event):
     else:
         return await edit_delete(
             event,
-            "**Berikan Link Sosmed atau Reply Link Sosmed Untuk di Download**",
+            "**Berikan Link Sosmed atau Reply Link Instagram Untuk di Download**",
         )
     xx = await edit_or_reply(event, "`Bentar Tod...`")
     chat = "@SaveAsbot"
@@ -97,7 +97,7 @@ async def DeezLoader(event):
         await event.delete()
 
 
-@tod(pattern="tiktok(?: |$)(.*)")
+@tod(pattern="tt(?: |$)(.*)")
 async def _(event):
     xxnx = event.pattern_match.group(1)
     if xxnx:
@@ -110,7 +110,7 @@ async def _(event):
             "**Berikan Link Tiktok Pesan atau Reply Link Tiktok Untuk di Download**",
         )
     xx = await edit_or_reply(event, "`Video Sedang Diproses...`")
-    chat = "@thisvidbot"
+    chat = "@downloader_tiktok_bot"
     async with event.client.conversation(chat) as conv:
         try:
             msg_start = await conv.send_message("/start")
@@ -139,7 +139,7 @@ async def _(event):
 CMD_HELP.update(
     {
         "sosmed": f"**Plugin : **`sosmed`\
-        \n\n  •  **Syntax :** `{cmd}sosmed` <link>\
+        \n\n  •  **Syntax :** `{cmd}ig` <link>\
         \n  •  **Function : **Download Media Dari Pinterest / Tiktok / Instagram.\
     "
     }
