@@ -164,7 +164,7 @@ async def botsettings(event):
     if event.query.user_id == OWNER_ID:
         await tgbot.send_message(
             event.chat_id,
-            message=f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\n**Apa ada yang bisa saya bantu?**",
+            message=f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\n**Mau ngapain tod?**",
             file=ramlogo,
             buttons=[
                 (Button.inline("sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
@@ -236,13 +236,6 @@ async def alivemenu(event):
             [
                 Button.inline("ᴀʟɪᴠᴇ ᴇᴍᴏᴊɪ", data="alvmoji"),
                 Button.inline("ᴀʟɪᴠᴇ ᴛᴇᴋs", data="alvteks"),
-            ],
-            [
-                Button.inline("ᴄʜᴀɴɴᴇʟ", data="alvch"),
-                Button.inline("ɢʀᴏᴜᴘ", data="alvgc"),
-            ],
-            [
-                Button.inline("ɪɢ ᴀʟɪᴠᴇ", data="alvig"),
             ],
             [Button.inline("« ʙᴀᴄᴋ", data="apiset")],
         ],
@@ -926,23 +919,12 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"**👋 Hai Anak Yatim!** {mention}**!**\
-                        \n\n**Gua Adalah {my_first}** \
-                        \n**Mending Lu Pc owner gua ngentot [{OWNER}](tg://user?id={OWNER_ID}) Tuh.**\
-                        \n**Lu jangan Spam Ngentot, Nanti gua Ban lo dari bumi si anjing!!!**\
-                        \n\n**Pesan Dari ==>** [✨RAM - UBOT✨](https://github.com/ramadhani892/RAM-UBOT)"
-        buttons = [
-            (
-                Button.url("ɢʀᴏᴜᴘ", f"{GROUP_LINK}"),
-                Button.url("ᴄʜᴀɴɴᴇʟ", f"{CH_SFS}"),
-            ),
-            (
-                Button.url("ɪɴsᴛᴀɢʀᴀᴍ", f"{IG_ALIVE}"),
-            )
-        ]
+            start_msg = f"**👋 hi,** {mention}**!**\
+                        \n\n**saya adalah {my_first}** \
+                        \n**apa ada yang bisa saya bantu?**"
     else:
         start_msg = f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\
-            \n**Apa ada yang bisa saya bantu?**"
+            \n**mau ngapain tod?**"
         buttons = [
             (Button.inline("sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
             (
