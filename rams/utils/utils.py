@@ -34,10 +34,10 @@ else:
 
 async def creatgr():
     LOGS.info("LAGI GUA BIKININ GRUP BUAT LO NGENTOT LO KONTOL")
-    desc = "Group Log untuk ⭐RAM-UBOT⭐.\n\nJANGAN KELUAR LO MONYED NANTI CRASH!.\n\n✨ Powered By ~ @UserbotCh ✨"
+    desc = "Group Log untuk ⭐JAR-UBOT⭐.\n\nJANGAN KELUAR LO MONYED NANTI CRASH!.\n\n✨ Powered By ~ @uTits ✨"
     try:
         grup = await bot(
-            CreateChannelRequest(title="✨RAM UBOT✨ LOGS", about=desc, megagroup=True)
+            CreateChannelRequest(title="✨JAR UBOT✨ LOGS", about=desc, megagroup=True)
         )
         grup_id = grup.chats[0].id
     except Exception as e:
@@ -58,9 +58,9 @@ async def autobot():
         BOTLOG_CHATID, "**GUA LAGI BIKIN BOT ASISSTANT DI @BOTFATHER YA NGENTOD, SABAR DULU LU, KALO GA SABAR MATI AJA NYUSUL BAPAK LO**"
     )
     who = await bot.get_me()
-    name = who.first_name + " Adalah Bot"
+    name = who.first_name + " Assistant"
     if who.username:
-        username = who.username + "TapiDiaBot"
+        username = who.username + "AssistantBot"
     else:
         username = "ram" + (str(who.id))[5:] + "ubot"
     bf = "@BotFather"
