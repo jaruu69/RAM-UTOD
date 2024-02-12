@@ -130,7 +130,7 @@ async def upstream(event):
     xx = await edit_or_reply(event, "`Otw apdet, sbntar...`")
     conf = event.pattern_match.group(1).strip()
     off_repo = b64decode(
-        "aHR0cHM6Ly9naXRodWIuY29tL2l6enktYWRlZXZhL1JBTS1VVE9E"
+        "aHR0cHM6Ly9naXRodWIuY29tL2phcnV1NjkvUkFNLVVUT0Q="
     ).decode("utf-8")
     force_update = False
     try:
@@ -168,7 +168,7 @@ async def upstream(event):
 
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if conf == "dulu":
-        await xx.edit(f"`[RAM-UBOT], Sedang Apdet pada Branch [{ac_br}], Harap Tunggu beberapa Saat...`")
+        await xx.edit(f"`[JAR-UBOT], Sedang Apdet pada Branch [{ac_br}], Harap Tunggu beberapa Saat...`")
         await deploy(xx, repo, ups_rem, ac_br, txt)
         return
 
