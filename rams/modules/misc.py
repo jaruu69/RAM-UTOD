@@ -76,7 +76,7 @@ async def shutdown_bot(event):
 async def restart_bot(rstrt):
     if rstrt.sender_id in SUDO_USERS:
         return
-    await edit_or_reply(rstrt, "**RAM-UBOT Berhasil di Restart**")
+    await edit_or_reply(rstrt, "**JAR-UBOT Berhasil di Restart**")
     if BOTLOG_CHATID:
         await rstrt.client.send_message(
             BOTLOG_CHATID, "#RESTART \n" "**JAR-UBOT Berhasil Di Restart**"
