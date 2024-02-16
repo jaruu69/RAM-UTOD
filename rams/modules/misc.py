@@ -79,7 +79,7 @@ async def restart_bot(rstrt):
     await edit_or_reply(rstrt, "**RAM-UBOT Berhasil di Restart**")
     if BOTLOG_CHATID:
         await rstrt.client.send_message(
-            BOTLOG_CHATID, "#RESTART \n" "**RAM-UBOT Berhasil Di Restart**"
+            BOTLOG_CHATID, "#RESTART \n" "**JAR-UBOT Berhasil Di Restart**"
         )
     args = [sys.executable, "-m", "rams"]
     execle(sys.executable, *args, environ)
