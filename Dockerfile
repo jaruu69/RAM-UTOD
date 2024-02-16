@@ -1,6 +1,6 @@
 FROM ramadhani892/ramubot:dragons
 
-RUN git clone -b master https://github.com/jaruu69/RAM-UTOD home/master/ 
+RUN git clone -b master https://github.com/zarszs/RAM-UTOD home/master/ 
    
 WORKDIR /home/master/
 
