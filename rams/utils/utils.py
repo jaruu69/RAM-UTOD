@@ -33,7 +33,7 @@ else:
 
 
 async def creatgr():
-    LOGS.info("LAGI GUA BIKININ GRUP BUAT LO NGENTOT LO KONTOL")
+    LOGS.info("LAGI GUA BIKININ GRUP BUAT LO ASU")
     desc = "Group Log untuk ⭐JAR-UBOT⭐.\n\nJANGAN KELUAR LO MONYED NANTI CRASH!.\n\n✨ Powered By ~ @uTits ✨"
     try:
         grup = await bot(
@@ -55,7 +55,7 @@ async def autobot():
         return
     await bot.start()
     await bot.send_message(
-        BOTLOG_CHATID, "**GUA LAGI BIKIN BOT ASISSTANT DI @BOTFATHER YA NGENTOD, SABAR DULU LU, KALO GA SABAR MATI AJA NYUSUL BAPAK LO**"
+        BOTLOG_CHATID, "**GUA LAGI BIKIN BOT ASISSTANT DI @BOTFATHER YA JING, SABAR DULU LU, KALO GA SABAR MATI AJA NYUSUL BAPAK LO**"
     )
     who = await bot.get_me()
     name = who.first_name + " Assistant"
@@ -117,7 +117,7 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_message(bf, f"Assistant punya si kontol {who.first_name}")
+            await bot.send_message(bf, f"Assistant punya si {who.first_name}")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setdescription")
             await asyncio.sleep(1)
