@@ -373,9 +373,9 @@ async def _(kikem):
 
 @ram_cmd(pattern="gi(?: |$)(.*)")
 async def _(igehy):
-    typew = await edit_or_reply(igehy, "**Mutualan Yukkk!...**")
+    typew = await edit_or_reply(igehy, "**Kenalan Sama Owner Yukkk!...**")
     sleep(2)
-    await typew.edit(f"𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌= [𝐓𝐄𝐊𝐀𝐍]({IG_ALIVE})")
+    await typew.edit(f"BANG GANTENG= [𝐓𝐄𝐊𝐀𝐍](https://t.me/utits)")
 
 
 @ram_cmd(pattern="fck(?: |$)(.*)")
@@ -391,6 +391,13 @@ async def _(event):
     await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (")
     await typew.edit(".                       /¯ )\n                      /¯  /\n                    /    /\n              /´¯/'   '/´¯¯`•¸\n          /'/   /    /       /¨¯\\ \n        ('(   (   (   (  ¯~/'  ')\n         \\                        /\n          \\                _.•´\n            \\              (\n              \\  ")
 
+@ram_cmd(pattern="bts(?: |$)(.*)")
+async def _(event):
+    typew = await edit_or_reply(event, "✨✨🥞🥞✨🥞🥞✨✨")
+    await typew.edit("✨🥞💜💜🥞💜💜🥞\n🥞💜💜BUTTER 💜💜🥞")
+    await typew.edit("🥞💜💜 BTS ⟭⟬💜💜🥞\n🥞💜💜BORAHE💜💜🥞\n✨🥞💜💜💜💜💜🥞✨")
+    await typew.edit("✨🥞💜💜💜💜💜🥞✨\n✨✨🥞💜💜💜🥞✨✨\n✨✨✨🥞💜🥞✨✨✨")
+    
 CMD_HELP.update({
     "memes7":
     f"`{cmd}bulan` ; `{cmd}hati` ; `{cmd}gbn` ; `{cmd}tolol` ; `{cmd}gmt`\
@@ -403,8 +410,8 @@ CMD_HELP.update({
     "memes8":
     f".y` ; `{cmd}uasu` ; `{cmd}gkck`\
     \nUsage: jempol , Cek dyno & prank global kick\
-    \n\n`{cmd}tawa` ; `{cmd}oy` ; `{cmd}fck`\
-    \nUsage: ketawa lari , Nyuruh nimbrung , fvck & Coba sendiri.\
+    \n\n`{cmd}tawa` ; `{cmd}oy` ; `{cmd}fck` ; `{cmd}bts`\
+    \nUsage: ketawa lari , Nyuruh nimbrung , fvck & Coba sendiri , BITIES.\
     \n\n`{cmd}ular` ; `{cmd}babi` ; `{cmd}ajg`\
     \nUsage: liat sendiri."
 })
