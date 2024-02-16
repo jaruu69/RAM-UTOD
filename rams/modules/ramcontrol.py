@@ -921,7 +921,7 @@ async def bot_start(event):
         else:
             start_msg = f"**👋 hi,** {mention}**!**\
                         \n\n**saya adalah {my_first}** \
-                        \n**apa ada yang bisa saya bantu?**"
+                        \n**apa ada yang bisa saya bantu {mention}?**"
     else:
         start_msg = f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\
             \n**mau ngapain tod?**"
