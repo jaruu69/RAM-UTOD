@@ -102,7 +102,7 @@ BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID") or 0)
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
-LMT_PM = int(os.environ.get("LMT_PM", 5))
+LMT_PM = int(os.environ.get("LMT_PM", 3))
 
 # Send .chatid in any group with all your administration bots (added)
 G_BAN_LOGGER_GROUP = os.environ.get("G_BAN_LOGGER_GROUP", "")
