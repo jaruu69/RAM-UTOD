@@ -49,7 +49,7 @@ async def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
     time_list = []
-    time_suffix_list = ["Dtk", "Mnt", "Jam", "Hari"]
+    time_suffix_list = ["s", "m", "h", "d"]
 
     while count < 4:
         count += 50
@@ -79,6 +79,7 @@ async def _(landak):
 async def _(landak):
     await landak.reply(random.choice(brb))
 
+@register(pattern=r"^ping$")
 @ram_cmd(pattern="ping$")
 async def _(ping):
     """ For.ping command, ping the rams from any chat."""
