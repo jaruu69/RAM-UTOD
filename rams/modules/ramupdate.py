@@ -25,7 +25,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(xx, ac_br, changelog):
     changelog_str = (
-        f"**✨ Tersedia Perapdetan RAM-UBOT Untuk branch [{ac_br}] :\n\n✨ Berikut ini Adalah Modules Yang harus Anda Apdet:**\n`{changelog}`"
+        f"**✨ Tersedia Perapdetan JAR-UBOT Untuk branch [{ac_br}] :\n\n✨ Berikut ini Adalah Modules Yang harus Anda Apdet:**\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
         await edit_or_reply(xx, "**Udah lama ga apdet lo, Nih gua kasih file bokep.**")
@@ -123,7 +123,7 @@ async def update(xx, repo, ups_rem, ac_br):
     execle(sys.executable, *args, environ)
 
 
-@ram_cmd(pattern="apdet( lah| dulu|$)")
+@ram_cmd(pattern="kentot( lah| dulu|$)")
 @register(pattern=r"^\.devupdate( lah| dulu|$)", sudo=True)
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
@@ -180,7 +180,7 @@ async def upstream(event):
         await print_changelogs(xx, ac_br, changelog)
         await xx.delete()
         return await event.respond(
-            f"**Ketik** `{cmd}apdet dulu` **untuk Mengapdet hehehe.**"
+            f"**Ketik** `{cmd}kentot dulu` **untuk Mengapdet hehehe.**"
         )
 
     if force_update:
@@ -195,7 +195,7 @@ async def upstream(event):
             ):
                 return await xx.edit(
                     "**Quick update telah dinonaktifkan untuk pembaruan ini; "
-                    f"Gunakan** `{cmd}apdet dulu` **sebagai gantinya.**"
+                    f"Gunakan** `{cmd}kentot dulu` **sebagai gantinya.**"
                 )
         await xx.edit("**Perfoming a quick update, please wait...**")
         await update(xx, repo, ups_rem, ac_br)
@@ -206,9 +206,9 @@ async def upstream(event):
 CMD_HELP.update(
     {
         "update": f"**Plugin : **`apdet`\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}apdet`\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}kentot`\
         \n  ↳ : **Untuk melihat apakah ada yang harus saya kentot.\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}apdet dulu`\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}kentot dulu`\
         \n  ↳ : **Untuk Mengentot fitur terbaru supaya bisa di gunakan.\
     "
     }
