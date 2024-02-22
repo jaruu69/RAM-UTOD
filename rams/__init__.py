@@ -588,7 +588,7 @@ with bot:
 
 with bot:
     try:
-        bot(Y("@ldaddystore"))
+        bot(Y("@daddyystore"))
         bot(Y("@jarsuprot"))
     except BaseException:
         pass
