@@ -18,12 +18,12 @@ from rams.events import ram_cmd
 from rams.utils import edit_delete, edit_or_reply
 
 DEF_UNAPPROVED_MSG = (
-    f"🦊. PESAN OTOMATIS\n\n"
-    f"➥ Rekber atau tanya fee langsung ke @Rekber_DinoBot\n"
-    f"➥ Jaspin, Jasget & Convert bisa langsung ke @Jaspin_DinoBot\n"
-    f"➥ Harap literasi di @Rekber_Dino terkait list admin, tnc, dan sebagainya.\n"
-    f"➥ Laporan penipuan ke @SatpamDino_Bot, cek @PenipuDino\n"
-    f"➥ Kepentingan lainnya akan dibalas ketika pemilik akun sudah on!"
+    f"Saya adalah Zar Userbot yang menjaga Room Chat Ini.\n"
+    f"Jangan Spam Atau Anda Akan Diblokir Otomatis.\n\n"
+    "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
+    "┣[• 𝐁𝐎𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄\n"
+    "┣[• 𝐁𝐘 ⭐️𝐉𝐀𝐑-𝐔𝐁𝐎𝐓⭐️\n"
+    "╰✠╼━━━━━━❖━━━━━━━✠╯"
 )
 
 @bot.on(events.NewMessage(incoming=True))
