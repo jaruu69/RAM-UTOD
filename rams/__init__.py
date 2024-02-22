@@ -217,7 +217,7 @@ DEFAULT = list(map(int, b64decode("MTkyNzgyNjgzMw==").split()))
 REPO_NAME = os.environ.get("REPO_NAME") or "⭐𝗝𝗔𝗥-𝗨𝗕𝗢𝗧⭐"
 
 # Default botlog
-BOTLOG_MSG = os.environ.get("BOTLOG_MSG") or f"```💢 JAR - UBOT HAS BEEN ACTIVATED!!! 💢```"
+BOTLOG_MSG = os.environ.get("BOTLOG_MSG") or f"```💢 𝗝𝗔𝗥 𝗨𝗕𝗢𝗧 𝗛𝗔𝗦 𝗕𝗘𝗘𝗡 𝗔𝗖𝗧𝗜𝗩𝗔𝗧𝗘𝗗 💢```"
 
 
 # Devg For gesss
