@@ -88,14 +88,10 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
-    await ping.client.send_message(
-        ping.chat_id, f"**╰•★★ |Jaru Ping| ★★•╯**\n"
-                    f"★ **speed:** "
-                    f"`%sms` \n"
-                    f"★ **Uptime:** "
-                    f"`{uptime}` \n"
-                    f"★ **owner:** [{user.first_name}](tg://user?id={user.id})\n" % (duration), reply_to=ping.reply_to_msg_id)
-    await ping.delete()
+    await ping.reply(
+            f"❏ ᴢᴀʀ ᴘɪɴɢ\n"
+            f"`%sms`" % (duration)
+    )
 
 @ram_cmd(pattern="rping$")
 @register(pattern=r"^\.cping(?: |$)(.*)", sudo=True)
@@ -173,12 +169,12 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user= await pong.client.get_me()
-    await pong.client.send_message(
-        pong.chat_id, f"**🌟𝗝𝗔𝗥-𝗨𝗕𝗢𝗧🌟**\n" 
-                     f"**➾ OWNER     :** [{user.first_name}](tg://user?id={user.id}) \n"
-                     f"**➾ Kecepatan : ** %sms  \n"
-                     f"**➾ Branch    : ** [{branch}] \n" % (duration), reply_to=pong.reply_to_msg_id) 
-    await pong.delete()
+    await pong.reply(
+            f"**🌟𝗝𝗔𝗥-𝗨𝗕𝗢𝗧🌟**\n" 
+            f"**➾ OWNER     :** [{user.first_name}](tg://user?id={user.id}) \n"
+            f"**➾ Kecepatan : ** `%sms`  \n"
+            f"**➾ Branch    : ** [{branch}] \n" % (duration)
+    )
 
 @ram_cmd(pattern="speed$")
 async def speedtst(spd):
