@@ -453,6 +453,32 @@ async def _(event):
         event.chat_id, "`MAAF GADULU YA` **😝😜🤪😛** ", reply_to=event.reply_to_msg_id)
     await event.delete()
 
+@ram_cmd(pattern="badut$")
+async def dut(event):
+    event = await edit_or_reply(event, "DUUTT BADUUTTT...")
+    animation_interval = 0.50
+    animation_ttl = range(0, 16)
+    animation_chars = [
+        "🤡",
+        "🤡🤡",
+        "🤡🤡🤡",
+        "🤡🤡🤡🤡",
+        "🤡🤡🤡🤡🤡",
+        "🤡🤡🤡🤡🤡🤡",
+        "🤡🤡🤡🤡🤡",
+        "🤡🤡🤡🤡",
+        "🤡🤡🤡",
+        "🤡🤡",
+        "🤡",
+        "LO",
+        "LO ITU",
+        "LO ITU CUMA",
+        "LO ITU CUMA BADUT 🤡",
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 16])
+
 @ram_cmd(pattern=r"(.*)")
 async def _(event):
     if event.fwd_from:
