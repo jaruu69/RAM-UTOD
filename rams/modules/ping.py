@@ -93,6 +93,19 @@ async def _(ping):
             f"`%sms`" % (duration)
     )
 
+@register(pattern=r"^\jping(?: |$)(.*)", sudo=True)
+async def _(ping):
+    """ For.ping command, ping the rams from any chat."""
+    uptime = await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    user = await ping.client.get_me()
+    await ping.reply(
+            f"❏ ᴢᴀʀ ᴘɪɴɢ\n"
+            f"`%sms`" % (duration)
+    )
+
 @ram_cmd(pattern="rping$")
 @register(pattern=r"^\.cping(?: |$)(.*)", sudo=True)
 async def _(pong):
