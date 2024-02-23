@@ -567,7 +567,7 @@ CMD_HELP.update({
 
 CMD_HELP.update({
     "memes10":
-    f"`{cmd}cinta`\
+    f"`{cmd}cinta` ; `{cmd}badut`\
     \nUsage: mengirim cintamu ke seseorang.\
     \n\n`{cmd}sange` ;  `{cmd}gblk`\
     \nUsage: cobalah sndiri ngentot."
