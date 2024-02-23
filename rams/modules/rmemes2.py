@@ -1340,6 +1340,18 @@ async def earth(event):
         return
 
 
+@bot.on(ram_cmd(outgoing=True, pattern="lul$"))
+async def earth(event):
+    deq = deque(list("😂🤣😂🤣😂🤣"))
+    try:
+        for x in range(32):
+            await sleep(0.1)
+            await event.edit("".join(deq))
+            deq.rotate(1)
+    except BaseException:
+        return
+
+
 @bot.on(ram_cmd(outgoing=True, pattern="hati$"))
 async def earth(event):
     deq = deque(list("🖤💜💙💚💛🧡❤️🤍"))
@@ -1484,6 +1496,10 @@ async def sayhi(e):
         "\n✨✨✨✨✨✨✨✨✨✨✨✨")
 
 
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 16])
+
 @bot.on(ram_cmd(pattern=r"scam(?: |$)(.*)", outgoing=True))
 async def scam(event):
     """ Just a small command to fake chat actions for fun !! """
@@ -1624,11 +1640,11 @@ async def nih(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
-                     "`\n />💖 *Ini Buat Kamu`"
+                     "`\n />💖 nih buat kamu`"
                      "\n                    \n"
                      r"`(\_/)`"
                      "`\n(●_●)`"
-                     "`\n💖<\\  *Tapi Bo'ong`")
+                     "`\n💖<\\  no, u don't deserve it`")
 
 
 @bot.on(ram_cmd(outgoing=True, pattern=r"fag$"))
