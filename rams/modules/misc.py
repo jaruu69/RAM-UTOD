@@ -334,9 +334,9 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
-        "restart": f"**Plugin : **`Restart RAM-UBOT`\
+        "restart": f"**Plugin : **`Restart JAR-UBOT`\
         \n\n  •  **Syntax :** `{cmd}restart`\
-        \n  •  **Function : **Untuk Merestart rams.\
+        \n  •  **Function : **Untuk Merestart jars.\
     "
     }
 )
