@@ -681,16 +681,16 @@ with bot:
                 result = builder.photo(
                     file=ramlogo,
                     link_preview=False,
-                    text=f"**✨ JAR - UBOT MENU ✨**\n\n•  **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**JAR - UBOT MENU**\n\n•  **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Modules",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
                     description="Repository JAR - UBOT",
-                    url="https://t.me/ramsupportt",
+                    url="https://t.me/jarsuprot",
                     thumb=InputWebDocument(HELP_LOGO, 0, "image/jpeg", []),
-                    text="**🌟 JAR - UBOT 🌟**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [merdhani](https://t.me/merdhni)\n**Support :** @UserbotCh\n❍▸ **Repository :** [⭐ RAM - UBOT ⭐](https://github.com/ramadhani892/RAM-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**JAR - UBOT**\n➖➖➖➖➖➖➖➖➖➖\n❍▸ **Owner Repo :** [merdhani](https://t.me/merdhni)\n**Support :** @UserbotCh\n❍▸ **Repository :** [⭐ RAM - UBOT ⭐](https://github.com/ramadhani892/RAM-UBOT)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/jarsuprot"),
@@ -735,23 +735,23 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="🌟 JAR - UBOT 🌟",
-                    description="JAR - UBOT | Telethon",
+                    title="JAR - UBOT",
+                    description="USERBOT BY @UTiTS",
                     url="https://t.me/jarsuprot",
                     thumb=InputWebDocument(HELP_LOGO, 0, "image/jpeg", []),
-                    text=f"**✨ JAR - UBOT ✨**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @UserbotCh\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**JAR - UBOT**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @UserbotCh\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/jarsuprot"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/izzy-adeeva/RAM-UTOD"
+                                "ʀᴇᴘᴏꜱɪᴛᴏʀʏ", "https://github.com/zarszs/RAM-UTOD"
                              ),
                         ],
                     ],
                     link_preview=False,
                 )
             await event.answer(
-                [result], switch_pm="👥 rams PORTAL", switch_pm_param="start"
+                [result], switch_pm="👥 ZARS PORTAL", switch_pm_param="start"
             )
 
         @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(rb"reopen")))
@@ -759,7 +759,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**⭐ JAR - UBOT ⭐ Inline Menu**\n\n🔸 **Owner** [{user.first_name}](tg://user?id={user.id})\n•  **Jumlah** `{len(dugmeler)}` Module"
+                text = f"**JAR - UBOT MENU**\n\n**Owner** [{user.first_name}](tg://user?id={user.id})\n**Jumlah** `{len(dugmeler)}` Module"
                 await event.edit(
                     text,
                     file=ramlogo,
@@ -791,7 +791,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in DEVS and SUDO_USERS:
                 openlagi = custom.Button.inline("• Re-Open Menu •", data="reopen")
                 await event.edit(
-                    "✴️ **Help Mode Button Ditutup!** ✴️", buttons=openlagi
+                    "**Help Mode Button Ditutup!**", buttons=openlagi
                 )
             else:
                 reply_pop_up_alert = f"Dikata jangan asal pencet ngentod, ini milik {owner}"
