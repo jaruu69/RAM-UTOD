@@ -34,10 +34,10 @@ else:
 
 async def creatgr():
     LOGS.info("LAGI GUA BIKININ GRUP BUAT LO ASU")
-    desc = "Group Log untuk ⭐JAR-UBOT⭐.\n\nJANGAN KELUAR LO MONYED NANTI CRASH!.\n\n✨ Powered By ~ @uTits ✨"
+    desc = "Group Log untuk JAR-UBOT.\n\nDILARANG KERAS UNTUK KELUAR DARI GRUP INI!.\n\nʚɞ Powered By ~ @uTits ʚɞ"
     try:
         grup = await bot(
-            CreateChannelRequest(title="✨JAR UBOT✨ LOGS", about=desc, megagroup=True)
+            CreateChannelRequest(title="JAR UBOT LOGS", about=desc, megagroup=True)
         )
         grup_id = grup.chats[0].id
     except Exception as e:
@@ -55,7 +55,7 @@ async def autobot():
         return
     await bot.start()
     await bot.send_message(
-        BOTLOG_CHATID, "**GUA LAGI BIKIN BOT ASISSTANT DI @BOTFATHER YA JING, SABAR DULU LU, KALO GA SABAR MATI AJA NYUSUL BAPAK LO**"
+        BOTLOG_CHATID, "**SEDANG MEMBUAT BOT ASSISTANT DI @BOTFATHER, MOHON TUNGGU BEBERAPA SAAT SAMPAI BOT MERESTART**"
     )
     who = await bot.get_me()
     name = who.first_name + " Assistant"
@@ -124,7 +124,7 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @uTits ✨"
+                bf, f"ﾒ Owner ~ {who.first_name} ﾒ\n\nﾒ Powered By ~ @uTits ﾒ"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -159,14 +159,14 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_message(bf, f"Buatan anak kontol {who.first_name}")
+        await bot.send_message(bf, f"Assistant punya si {who.first_name}")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setdescription")
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"✨ Owner ~ {who.first_name} ✨\n\n✨ Powered By ~ @uTits ✨"
+            bf, f"ʚɞ Owner ~ {who.first_name} ʚɞ\n\nʚɞ Powered By ~ @uTits ʚɞ"
         )
         await bot.send_message(
             BOTLOG_CHATID,
