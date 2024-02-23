@@ -923,6 +923,9 @@ async def bot_start(event):
                         \n\n**saya adalah {my_first}** \
                         \n**apa ada yang bisa saya bantu {mention}?**"
             buttons = [
+                (
+                Button.url("ᴍᴇꜱꜱᴀɢᴇ ʙʏ ᴢᴀʀ ᴜꜱᴇʀʙᴏᴛ", f"{GROUP_LINK}"),
+                )
             ]
     else:
         start_msg = f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\
