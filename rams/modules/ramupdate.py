@@ -92,7 +92,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
                 xx, "**Gagal Apdet!** Di Karenakan Ada Code Yang rusak.`"
             )
         await edit_or_reply(
-            xx, f"**Seperti Nya, RAM-UBOT Mu Sudah Selesai Di Apdet, Silahkan Tunggu beberapa Saat Sampai Ada notif Dari RAM-UBOT, Setelah itu Test rams mu, jika tidak Bekerja Bisa Bertanya Ke @ramsupportt**"
+            xx, f"**Seperti Nya, JAR-UBOT Mu Sudah Selesai Di Apdet, Silahkan Tunggu beberapa Saat Sampai Ada notif Dari JAR-UBOT, Setelah itu Test Bot mu, jika tidak Bekerja Bisa Bertanya Ke @jarsuprot**"
     )
 
     else:
@@ -107,7 +107,7 @@ async def update(xx, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await edit_or_reply(
-        xx, f"**Seperti Nya, RAM-UBOT Mu Sudah Selesai Di Apdet, Silahkan Tunggu beberapa Saat Sampai Ada notif Dari RAM-UBOT, Setelah itu Test rams mu, jika tidak Bekerja Bisa Bertanya Ke @ramsupportt**"
+        xx, f"**Seperti Nya, JAR-UBOT Mu Sudah Selesai Di Apdet, Silahkan Tunggu beberapa Saat Sampai Ada notif Dari JAR-UBOT, Setelah itu Test Bot mu, jika tidak Bekerja Bisa Bertanya Ke @jarsuprot**"
     )
 
     try:
