@@ -239,7 +239,7 @@ async def amireallyalive(alive):
         f"{emo} **Telethon Version :** `{version.__version__}` \n"
         f"{emo} **Bot Uptime :** `{uptime}` \n"
         f"{emo} **Branch     :** `[{branch}]` \n"
-        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁]({GROUP_LINK})** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹]({CH_SFS})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={user.id})**\n"
+        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁]({GROUP_LINK})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={user.id})**\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰"
     )
     if ALIVE_LOGO:
@@ -303,7 +303,7 @@ async def amireallyalive(alive):
     await asyncio.sleep(2)
     output = (
         f"**✠╼━━━━━━❖━━━━━━━✠ ** \n"
-        f"**          ⭐️𝗝𝗔𝗥-𝗨𝗕𝗢𝗧⭐️** \n"
+        f"**          𝗝𝗔𝗥-𝗨𝗕𝗢𝗧** \n"
         f"**✠╼━━━━━━❖━━━━━━━✠** \n"
         f"╭✠╼━━━━━━❖━━━━━━━✠╮ \n"
         f"┣|• `{emo} Majikan  :`{user.first_name} \n"
