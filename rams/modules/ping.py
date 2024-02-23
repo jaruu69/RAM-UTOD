@@ -79,7 +79,6 @@ async def _(landak):
 async def _(landak):
     await landak.reply(random.choice(brb))
 
-@register(pattern=r"^ping$")
 @ram_cmd(pattern="ping$")
 async def _(ping):
     """ For.ping command, ping the rams from any chat."""
