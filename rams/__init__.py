@@ -290,13 +290,13 @@ ALIVE_LOGO = os.environ.get(
 
 # Default .helpme logo
 HELP_LOGO = os.environ.get(
-   "HELP_LOGO") or "https://telegra.ph/file/58d344e45083f90d45d6a.jpg"
+   "HELP_LOGO") or "https://telegra.ph//file/d751a68b025dd75e06cb0.png"
 
 # Default .alive Instagram
 IG_ALIVE = os.environ.get("IG_ALIVE", None)
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "☠︎︎"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⛧"
 
 # Picture For VCPLUGIN
 PLAY_PIC = (
