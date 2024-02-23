@@ -228,7 +228,7 @@ async def amireallyalive(alive):
     output = (
         f"**[JAR-UBOT](tg://user?id={user.id}) Update dan berjalan.**\n\n"
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
-        f"       **{aliver}**\n"
+        f"       **Hey bro, I am {user.first_name}.**\n"
         f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
         f"{emo} **Master :** [{user.first_name}](tg://user?id={user.id}) \n"
