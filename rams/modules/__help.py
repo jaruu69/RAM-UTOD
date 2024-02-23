@@ -27,7 +27,7 @@ from rams.utils import edit_or_reply, ram_cmd
 
 
 @register(pattern=r"^jhelp$")
-@ram_cmd(pattern="rhelp")
+@ram_cmd(pattern="jhelp")
 async def _(event):
     if event.fwd_from:
         return
@@ -63,7 +63,7 @@ async def _(event):
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 await xx.edit(
-                    f"**Berhasil Menyalakan Mode Inline**\n\n**Ketik** `{cmd}rhelp` **lagi untuk membuka menu bantuan.**"
+                    f"**Berhasil Menyalakan Mode Inline**\n\n**Ketik** `{cmd}jhelp` **lagi untuk membuka menu bantuan.**"
                 )
             await bot.delete_messages(
                 conv.chat_id,
