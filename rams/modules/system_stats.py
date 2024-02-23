@@ -33,7 +33,7 @@ async def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
     time_list = []
-    time_suffix_list = ["Dtk", "Mnt", "Jam", "Hari"]
+    time_suffix_list = ["s", "m", "h", "d"]
 
     while count < 4:
         count += 1
@@ -162,7 +162,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**☛**RAM-UBOT Versi:** \n "
+            "**☛**JAR-UBOT Versi:** \n "
             f"{verout}"
             "\n**☛**Revisi:**\n "
             f"{revout}"
@@ -226,7 +226,7 @@ async def amireallyalive(alive):
     user = await alive.client.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
-        f"**[RAM-UBOT](https://github.com/ramadhani892/RAM-UBOT) Update dan berjalan.**\n\n"
+        f"**[JAR-UBOT](tg://user?id={user.id}) Update dan berjalan.**\n\n"
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
         f"       **{aliver}**\n"
         f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n\n"
@@ -248,18 +248,15 @@ async def amireallyalive(alive):
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(50)
-            await msg.delete()
         except BaseException:
             await alive.edit(
                 output + "\n\n *`The provided logo is invalid."
                 "\nMake sure the link is directed to the logo picture`"
             )
             await asyncio.sleep(100)
-            await alive.delete()
     else:
         await alive.edit(output)
         await asyncio.sleep(100)
-        await alive.delete()
 
 @ram_cmd(pattern=r"(?:ralive|ron)\s?(.)?")
 async def amireallyalive(alive):
@@ -267,7 +264,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
-        f"       **♕  ⭐️𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐️  ♕** \n"
+        f"       **♕  𝗝𝗔𝗥-𝗨𝗕𝗢𝗧  ♕** \n"
         f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n"
         f"❃ **Tuan**             ➥ `{user.first_name}` \n"
         f"❃ **Username**    ➥ `@{user.username}` \n"
@@ -276,7 +273,7 @@ async def amireallyalive(alive):
         f"❃ **Versi Bot**      ➥ `{BOT_VER}` \n"
         f"❃ **Modul**           ➥ `{len(modules)}` \n\n"
         f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰**\n"
-        f"[{REPO_NAME}](https://github.com/ramadhani892/RAM-UBOT) || [𝗚𝗥𝗢𝗨𝗣]({GROUP_LINK}) || [𝗜𝗡𝗦𝗧𝗔𝗚𝗥𝗔𝗠]({IG_ALIVE})\n"
+        f"[𝗢𝗪𝗡𝗘𝗥](tg://user?id={user.id}) || [𝗚𝗥𝗢𝗨𝗣]({GROUP_LINK})\n"
         f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ **")
     if ALIVE_LOGO:
         try:
@@ -284,18 +281,15 @@ async def amireallyalive(alive):
             await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(50)
-            await msg.delete()
         except BaseException:
             await alive.edit(
                 output + "\n\n *`The provided logo is invalid."
                 "\nMake sure the link is directed to the logo picture`"
             )
             await asyncio.sleep(100)
-            await alive.delete()
     else:
         await alive.edit(output)
         await asyncio.sleep(100)
-        await alive.delete()
 
 
 @ram_cmd(pattern=r"(?:ram|rambot)\s?(.)?")
@@ -309,7 +303,7 @@ async def amireallyalive(alive):
     await asyncio.sleep(2)
     output = (
         f"**✠╼━━━━━━❖━━━━━━━✠ ** \n"
-        f"**          ⭐️𝗥𝗔𝗠-𝗨𝗕𝗢𝗧⭐️** \n"
+        f"**          ⭐️𝗝𝗔𝗥-𝗨𝗕𝗢𝗧⭐️** \n"
         f"**✠╼━━━━━━❖━━━━━━━✠** \n"
         f"╭✠╼━━━━━━❖━━━━━━━✠╮ \n"
         f"┣|• `{emo} Majikan  :`{user.first_name} \n"
@@ -324,7 +318,7 @@ async def amireallyalive(alive):
         f"┣|• `Modules     :`{len(modules)} Modules \n"
         f"╰✠╼━━━━━━❖━━━━━━━✠╯ \n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n"
-        f"[{REPO_NAME}](https://github.com/ramadhani892/RAM-UBOT) || [𝐆𝐑𝐎𝐔𝐏]({GROUP_LINK}) || [𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌]({IG_ALIVE}) \n"
+        f"[𝗢𝗪𝗡𝗘𝗥](tg://user?id={user.id}) || [𝐆𝐑𝐎𝐔𝐏]({GROUP_LINK}) \n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰")
     if ALIVE_LOGO:
         try:
@@ -339,11 +333,9 @@ async def amireallyalive(alive):
                 "\nPastikan Tautan Yang Anda Gunakan Valid`"
             )
             await asyncio.sleep(100)
-            await alive.delete()
     else:
         await alive.edit(output)
         await asyncio.sleep(100)
-        await alive.delete()
 
 
 @ram_cmd(pattern=r"aliveu")
