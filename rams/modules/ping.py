@@ -100,10 +100,10 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
-    await ping.reply(
-            f"**❏ ᴢᴀʀ ᴘɪɴɢ**\n"
-            f"`%sms`" % (duration)
-    )
+    await ping.client.send_message(
+        ping.chat_id, f"**♡ ᴢᴀʀ ᴘɪɴɢ** `%sms`\n"
+                    f"**♡ ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n" % (duration), reply_to=ping.reply_to_msg_id)
+    await ping.delete()
 
 @ram_cmd(pattern="rping$")
 async def _(pong):
