@@ -25,7 +25,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(xx, ac_br, changelog):
     changelog_str = (
-        f"**✨ Tersedia Perapdetan JAR-UBOT Untuk branch [{ac_br}] :\n\n✨ Berikut ini Adalah Modules Yang harus Anda Apdet:**\n`{changelog}`"
+        f"**✨ Tersedia Perapdetan ZAR-UBOT :\n\n✨ Berikut ini Adalah Modules Yang harus Anda Apdet:**\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
         await edit_or_reply(xx, "**Udah lama ga apdet lo, Nih gua kasih file bokep.**")
@@ -92,7 +92,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
                 xx, "**Gagal Apdet!** Di Karenakan Ada Code Yang rusak.`"
             )
         await edit_or_reply(
-            xx, f"**Seperti Nya, JAR-UBOT Mu Sudah Selesai Di Apdet, Silahkan Tunggu beberapa Saat Sampai Ada notif Dari JAR-UBOT, Setelah itu Test Bot mu, jika tidak Bekerja Bisa Bertanya Ke @jarsuprot**"
+            xx, f"**zar-ubot berhasil di apdet, tunggu sebentar karena sedang merestart. jika tidak bekerja bisa bertanya ke @jarsuprot**"
     )
 
     else:
@@ -107,7 +107,7 @@ async def update(xx, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await edit_or_reply(
-        xx, f"**Seperti Nya, JAR-UBOT Mu Sudah Selesai Di Apdet, Silahkan Tunggu beberapa Saat Sampai Ada notif Dari JAR-UBOT, Setelah itu Test Bot mu, jika tidak Bekerja Bisa Bertanya Ke @jarsuprot**"
+        xx, f"**zar-ubot berhasil di apdet, tunggu sebentar karena sedang merestart. jika tidak bekerja bisa bertanya ke @jarsuprot**"
     )
 
     try:
@@ -124,7 +124,7 @@ async def update(xx, repo, ups_rem, ac_br):
 
 
 @ram_cmd(pattern="kentot( lah| dulu|$)")
-@register(pattern=r"^\.devupdate( lah| dulu|$)", sudo=True)
+@register(pattern=r"^\.woikentot( lah| dulu|$)", sudo=True)
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     xx = await edit_or_reply(event, "`Otw apdet, sbntar...`")
@@ -168,7 +168,7 @@ async def upstream(event):
 
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
     if conf == "dulu":
-        await xx.edit(f"`[JAR-UBOT], Sedang Apdet pada Branch [{ac_br}], Harap Tunggu beberapa Saat...`")
+        await xx.edit(f"`zar-ubot sedang melakukan apdet, harap tunggu beberapa saat...`")
         await deploy(xx, repo, ups_rem, ac_br, txt)
         return
 
@@ -180,7 +180,7 @@ async def upstream(event):
         await print_changelogs(xx, ac_br, changelog)
         await xx.delete()
         return await event.respond(
-            f"**Ketik** `{cmd}kentot dulu` **untuk Mengapdet hehehe.**"
+            f"**ketik** `{cmd}kentot dulu` **untuk mengapdet hehehe.**"
         )
 
     if force_update:
