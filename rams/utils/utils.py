@@ -34,10 +34,10 @@ else:
 
 async def creatgr():
     LOGS.info("LAGI GUA BIKININ GRUP BUAT LO ASU")
-    desc = "Group Log untuk JAR-UBOT.\n\nDILARANG KERAS UNTUK KELUAR DARI GRUP INI!.\n\nʚɞ Powered By ~ @uTits ʚɞ"
+    desc = "Group Log untuk ZAR-UBOT.\n\nDILARANG KERAS UNTUK KELUAR DARI GRUP INI!.\n\n♡ Powered By ~ @uTits ♡"
     try:
         grup = await bot(
-            CreateChannelRequest(title="JAR UBOT LOGS", about=desc, megagroup=True)
+            CreateChannelRequest(title="ZAR BOT LOGS", about=desc, megagroup=True)
         )
         grup_id = grup.chats[0].id
     except Exception as e:
@@ -60,7 +60,7 @@ async def autobot():
     who = await bot.get_me()
     name = who.first_name + " Assistant"
     if who.username:
-        username = who.username + "AssistantBot"
+        username = who.username + "assistantbot"
     else:
         username = "ram" + (str(who.id))[5:] + "ubot"
     bf = "@BotFather"
@@ -166,7 +166,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"ʚɞ Owner ~ {who.first_name} ʚɞ\n\nʚɞ Powered By ~ @uTits ʚɞ"
+            bf, f"♡ Owner ~ {who.first_name} ♡\n\n♡ Powered By ~ @uTits ♡"
         )
         await bot.send_message(
             BOTLOG_CHATID,
