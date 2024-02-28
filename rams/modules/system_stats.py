@@ -162,7 +162,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**☛**JAR-UBOT Versi:** \n "
+            "**☛**ZAR-UBOT Versi:** \n "
             f"{verout}"
             "\n**☛**Revisi:**\n "
             f"{revout}"
@@ -226,7 +226,7 @@ async def amireallyalive(alive):
     user = await alive.client.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
-        f"**[JAR-UBOT](tg://user?id={user.id}) Update dan berjalan.**\n\n"
+        f"**♡ [ZAR-UBOT](tg://user?id={user.id}) Update dan berjalan.**\n\n"
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
         f"       **Hey bro, I am {user.first_name}.**\n"
         f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n\n"
@@ -239,7 +239,7 @@ async def amireallyalive(alive):
         f"{emo} **Telethon Version :** `{version.__version__}` \n"
         f"{emo} **Bot Uptime :** `{uptime}` \n"
         f"{emo} **Branch     :** `[{branch}]` \n"
-        f"    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁]({GROUP_LINK})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={user.id})**\n"
+        f"    ♡ **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁]({GROUP_LINK})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={user.id})** ♡\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰"
     )
     if ALIVE_LOGO:
@@ -258,13 +258,13 @@ async def amireallyalive(alive):
         await alive.edit(output)
         await asyncio.sleep(100)
 
-@ram_cmd(pattern=r"(?:ralive|ron)\s?(.)?")
+@ram_cmd(pattern=r"(?:zalive|zon)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
-        f"       **♕  𝗝𝗔𝗥-𝗨𝗕𝗢𝗧  ♕** \n"
+        f"       **♡  𝗭𝗔𝗥-𝗨𝗕𝗢𝗧  ♡** \n"
         f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n"
         f"❃ **Tuan**             ➥ `{user.first_name}` \n"
         f"❃ **Username**    ➥ `@{user.username}` \n"
@@ -273,7 +273,7 @@ async def amireallyalive(alive):
         f"❃ **Versi Bot**      ➥ `{BOT_VER}` \n"
         f"❃ **Modul**           ➥ `{len(modules)}` \n\n"
         f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰**\n"
-        f"[𝗢𝗪𝗡𝗘𝗥](tg://user?id={user.id}) || [𝗚𝗥𝗢𝗨𝗣]({GROUP_LINK})\n"
+        f"♡ [𝗢𝗪𝗡𝗘𝗥](tg://user?id={user.id}) || [𝗚𝗥𝗢𝗨𝗣]({GROUP_LINK}) ♡\n"
         f"**▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ **")
     if ALIVE_LOGO:
         try:
@@ -292,7 +292,7 @@ async def amireallyalive(alive):
         await asyncio.sleep(100)
 
 
-@ram_cmd(pattern=r"(?:ram|rambot)\s?(.)?")
+@ram_cmd(pattern=r"(?:zar|zarbot)\s?(.)?")
 @register(pattern=r"^\.(?:clive|on)\s?(.)?", sudo=True)
 async def amireallyalive(alive):
     user = await bot.get_me()
@@ -303,7 +303,7 @@ async def amireallyalive(alive):
     await asyncio.sleep(2)
     output = (
         f"**✠╼━━━━━━❖━━━━━━━✠ ** \n"
-        f"**          𝗝𝗔𝗥-𝗨𝗕𝗢𝗧** \n"
+        f"**          ♡ 𝗭𝗔𝗥-𝗨𝗕𝗢𝗧 ♡** \n"
         f"**✠╼━━━━━━❖━━━━━━━✠** \n"
         f"╭✠╼━━━━━━❖━━━━━━━✠╮ \n"
         f"┣|• `{emo} Majikan  :`{user.first_name} \n"
@@ -318,7 +318,7 @@ async def amireallyalive(alive):
         f"┣|• `Modules     :`{len(modules)} Modules \n"
         f"╰✠╼━━━━━━❖━━━━━━━✠╯ \n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ \n"
-        f"[𝗢𝗪𝗡𝗘𝗥](tg://user?id={user.id}) || [𝐆𝐑𝐎𝐔𝐏]({GROUP_LINK}) \n"
+        f"♡ [𝗢𝗪𝗡𝗘𝗥](tg://user?id={user.id}) || [𝐆𝐑𝐎𝐔𝐏]({GROUP_LINK}) ♡\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰")
     if ALIVE_LOGO:
         try:
