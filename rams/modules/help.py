@@ -34,7 +34,7 @@ async def help(event):
         )
         await event.reply(
             f"╭┄──────┈┄┈──────┄\n"
-            f"│ ▸ **Daftar Perintah JAR-UBOT :**\n"
+            f"│ ▸ **Daftar Perintah ZAR-UBOT :**\n"
             f"│ ▸ **Jumlah** `{len(modules)}` **Modules**\n"
             f"│ ▸ **Owner:** [{user.first_name}](tg://user?id={user.id})\n"
             f"├┄─────┈┄┈─────┄\n"
