@@ -1,3 +1,4 @@
+"""
 from rams import CMD_HELP, BLACKLIST_CHAT, CMD_HANDLER as cmd
 from rams.events import register
 from rams.utils import ram_cmd
@@ -170,3 +171,4 @@ CMD_HELP.update({
 \n\nK\
 \nUsage: Untuk mengontoli mereka."
 })
+"""
