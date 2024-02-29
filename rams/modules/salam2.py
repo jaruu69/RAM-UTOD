@@ -2,6 +2,7 @@
 # NGEDIT CMD YG BENER KONTOL!!!
 # YANG HAPUS KREDIT GUA TANDAIN REPO LO
 
+"""
 from rams import CMD_HELP, BLACKLIST_CHAT, OWNDEV, CMD_HANDLER as cmd
 from rams.utils import edit_or_reply, ram_cmd
 
@@ -183,3 +184,4 @@ CMD_HELP.update({
 \n\n{cmd}k\
 \nUsage:"
 })
+"""
