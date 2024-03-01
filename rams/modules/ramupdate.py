@@ -124,7 +124,7 @@ async def update(xx, repo, ups_rem, ac_br):
 
 
 @ram_cmd(pattern="apdet( lah| dulu|$)")
-@register(pattern=r"^\.woiapdet( lah| dulu|$)", sudo=True)
+@register(pattern=r"^\woiapdet( lah| dulu|$)", sudo=True)
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     xx = await edit_or_reply(event, "`Otw apdet, sbntar...`")
