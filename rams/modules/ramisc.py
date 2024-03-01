@@ -157,13 +157,13 @@ async def apk(e):
         await edit_delete(xx, "Exception Occured:- " + str(err))
 
 
-@ram_cmd(pattern="calc(?: |$)(.*)")
+@ram_cmd(pattern="mtk(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
     input = event.pattern_match.group(1)  # get input
-    exp = "Given expression is " + input  # report back input
-    xx = await edit_or_reply(event, "`Processing...`")
+    exp = "hasil dari " + input + "adalah"  # report back input
+    xx = await edit_or_reply(event, "`sedang menghitung...`")
     # lazy workaround to add support for two digits
     final_input = tuple(input)
     term1part1 = final_input[0]
@@ -178,7 +178,7 @@ async def _(event):
     # actual calculations go here
     if input == "help":
         await xx.edit(
-            "Syntax .calc <term1><operator><term2>\nFor eg .calc 02*02 or 99*99 (the zeros are important) (two terms and two digits max)"
+            "Syntax .mtk <term1><operator><term2>\nFor eg .calc 02*02 or 99*99 (the zeros are important) (two terms and two digits max)"
         )
     elif operator == "*":
         await xx.edit("Solution -->\n" + exp + "\n" + str(final_term1 * final_term2))
@@ -191,7 +191,7 @@ async def _(event):
     elif operator == "%":
         await xx.edit("Solution -->\n" + exp + "\n" + str(final_term1 % final_term2))
     else:
-        await xx.edit("**Ketik** `.help calc` **bila butuh bantuan**")
+        await xx.edit("**Ketik** `.help mtk` **bila butuh bantuan**")
 
 
 @ram_cmd(pattern="xcd(?: |$)(.*)")
@@ -952,6 +952,15 @@ CMD_HELP.update(
 
 CMD_HELP.update(
     {
+        "watch": f"**Plugin : **`matematika`\
+        \n\n  •  **Syntax :** `{cmd}mtk\
+        \n  •  **Function : `{cmd}mtk <term1><operator><term2>\nContoh {cmd}mtk 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
+    "
+    }
+)
+
+CMD_HELP.update(
+    {
         "randompp": f"**Plugin : **`randompp`\
         \n\n  •  **Syntax :** `{cmd}randompp`\
         \n  •  **Function : **Otomatis Mengganti Foto Profile Mu, Untuk Stop ini Ketik .restart\
@@ -1021,8 +1030,6 @@ CMD_HELP.update(
     {
         "appmisc": f"`{cmd}app`\
 \nUsage: ketik `{cmd}app namaapp` Dan Dapatkan Detail Informasi App.\
-\n\n`.calc`\
-\nUsage: `{cmd}calc <term1><operator><term2>\nUntuk eg {cmd}calc 02*02 Atau 99*99 (Angka Nol Penting) (Minimal Dua Suku Dan Dua Digit).\
 \n\n`{cmd}xcd`\
 \nUsage: Ketik xcd <query>.ps:Aku Sangat Bosan\
 \n\n`{cmd}res`\
