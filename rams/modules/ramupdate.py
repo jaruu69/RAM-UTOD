@@ -92,7 +92,7 @@ async def deploy(xx, repo, ups_rem, ac_br, txt):
                 xx, "**Gagal Apdet!** Di Karenakan Ada Code Yang rusak.`"
             )
         await edit_or_reply(
-            xx, f"**zar-ubot berhasil di apdet, tunggu sebentar karena sedang merestart. jika tidak bekerja bisa bertanya ke @jarsuprot**"
+            xx, f"**zar-ubot berhasil di apdet, tunggu sebentar sampai ubot hidup. jika tidak bekerja bisa bertanya ke @jarsuprot**"
     )
 
     else:
@@ -107,7 +107,7 @@ async def update(xx, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await edit_or_reply(
-        xx, f"**zar-ubot berhasil di apdet, tunggu sebentar karena sedang merestart. jika tidak bekerja bisa bertanya ke @jarsuprot**"
+        xx, f"**zar-ubot berhasil di apdet, tunggu sebentar sampai ubot hidup. jika tidak bekerja bisa bertanya ke @jarsuprot**"
     )
 
     try:
@@ -123,8 +123,8 @@ async def update(xx, repo, ups_rem, ac_br):
     execle(sys.executable, *args, environ)
 
 
-@ram_cmd(pattern="kentot( lah| dulu|$)")
-@register(pattern=r"^\.woikentot( lah| dulu|$)", sudo=True)
+@ram_cmd(pattern="apdet( lah| dulu|$)")
+@register(pattern=r"^\.woiapdet( lah| dulu|$)", sudo=True)
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     xx = await edit_or_reply(event, "`Otw apdet, sbntar...`")
@@ -173,14 +173,14 @@ async def upstream(event):
         return
 
     if changelog == "" and not force_update:
-        await edit_delete(xx, "**😔✋ Baru abis apdet tolol, Belom ada apdet lagi.**")
+        await edit_delete(xx, "**ubotmu sudah versi terbaru.**")
         return repo.__del__()
 
     if conf == "" and not force_update:
         await print_changelogs(xx, ac_br, changelog)
         await xx.delete()
         return await event.respond(
-            f"**ketik** `{cmd}kentot dulu` **untuk mengapdet hehehe.**"
+            f"**ketik** `{cmd}apdet dulu` **untuk mengapdet hehehe.**"
         )
 
     if force_update:
@@ -195,7 +195,7 @@ async def upstream(event):
             ):
                 return await xx.edit(
                     "**Quick update telah dinonaktifkan untuk pembaruan ini; "
-                    f"Gunakan** `{cmd}kentot dulu` **sebagai gantinya.**"
+                    f"Gunakan** `{cmd}apdet dulu` **sebagai gantinya.**"
                 )
         await xx.edit("**Perfoming a quick update, please wait...**")
         await update(xx, repo, ups_rem, ac_br)
@@ -206,10 +206,10 @@ async def upstream(event):
 CMD_HELP.update(
     {
         "update": f"**Plugin : **`apdet`\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}kentot`\
-        \n  ↳ : **Untuk melihat apakah ada yang harus saya kentot.\
-        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}kentot dulu`\
-        \n  ↳ : **Untuk Mengentot fitur terbaru supaya bisa di gunakan.\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}apdet`\
+        \n  ↳ : **Untuk melihat apdetan yang tersedia.\
+        \n\n  𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `{cmd}apdet dulu`\
+        \n  ↳ : **Untuk mengapdet fitur terbaru supaya bisa di gunakan.\
     "
     }
 )
