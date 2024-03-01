@@ -1,21 +1,17 @@
 {
-  "name": "RAM-UBOT",
-  "description": "[RAM-UBOT] rams KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "description": "USERBOT KHUSUS YANG DIGUNAKAN UNTUK MEMANAGE AKUN DI TELEGRAM.",
   "logo": "https://telegra.ph/file/be5a4a2cb6aac37ca7945.jpg",
   "keywords": [
     "telegram",
-    "rams",
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/ramadhani892/RAM-UBOT",
-  "telegram": "https://t.me/Ramadhaniiiiiii1",
-  "success_url": "https://t.me/ramaupportt",
+  "success_url": "https://t.me/jasuprot",
   "stack": "container",
   "env": {
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di Grup » @ramsupportt » Lalu ketik #string",
+      "description": "Dapatkan String Session di ch",
       "required": true
     },
     "HEROKU_APP_NAME": {
