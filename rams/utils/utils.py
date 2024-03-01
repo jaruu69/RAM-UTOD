@@ -33,7 +33,7 @@ else:
 
 
 async def creatgr():
-    LOGS.info("LAGI GUA BIKININ GRUP BUAT LO ASU")
+    LOGS.info("SEDANG MEMBUAT GRUP LOG UNTUK ANDA")
     desc = "Group Log untuk ZAR-UBOT.\n\nDILARANG KERAS UNTUK KELUAR DARI GRUP INI!.\n\n♡ Powered By ~ @uTits ♡"
     try:
         grup = await bot(
