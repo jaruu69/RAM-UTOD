@@ -27,7 +27,7 @@ async def _(event):
     await event.delete()
 
 CMD_HELP.update({
-    "ribut":
+    "salam2":
     f"{cmd}p\
 \nUsage: salam\
 \n\n{cmd}l\
