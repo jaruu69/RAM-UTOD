@@ -51,11 +51,11 @@ async def start_voice(c):
     creator = chat.creator
 
     if not admin and not creator:
-        await edit_delete(c, "**LO BUKAN ADMIN ANJINGGG!!!!!!**")
+        await edit_delete(c, "**Maaf, anda bukan admin.**")
         return
     try:
         await c.client(startvc(c.chat_id))
-        await edit_or_reply(c, "`OBROLAN SUARA DI NYALAKAN, YANG ONCAM LO NGENTOT!!`")
+        await edit_or_reply(c, "`Obrolan suara berhasil diaktifkan.`")
     except Exception as ex:
         await edit_delete(c, f"**ERROR:** `{ex}`")
 
@@ -69,11 +69,11 @@ async def stop_voice(c):
     creator = chat.creator
 
     if not admin and not creator:
-        await edit_delete(c, "**lo bukan admin ngentoootttttt!!!**")
+        await edit_delete(c, "**Maaf, anda bukan admin.**")
         return
     try:
         await c.client(stopvc(await get_call(c)))
-        await edit_or_reply(c, "`OBROLAN SUARA DI MATIKAN, TYPING AJA YA BABI!!!!`")
+        await edit_or_reply(c, "`Obrolan suara berhasil dinonaktifkan.`")
     except Exception as ex:
         await edit_delete(c, f"**ERROR:** `{ex}`")
 
