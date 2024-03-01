@@ -162,7 +162,7 @@ async def _(event):
     if event.fwd_from:
         return
     input = event.pattern_match.group(1)  # get input
-    exp = "hasil dari " + input + "adalah"  # report back input
+    exp = "hasil dari " + input + " adalah"  # report back input
     xx = await edit_or_reply(event, "`sedang menghitung...`")
     # lazy workaround to add support for two digits
     final_input = tuple(input)
