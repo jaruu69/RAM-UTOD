@@ -146,7 +146,7 @@ async def users(event):
                 event.chat_id,
                 fileuser,
                 force_document=True,
-                thumb="rams/utils/styles/jarsist.png",
+                thumb="rams/utils/styles/zarbot.jpg",
                 caption="**Total Pengguna Di Bot anda.**",
                 allow_cache=False,
                 buttons=[
@@ -164,7 +164,7 @@ async def botsettings(event):
     if event.query.user_id == OWNER_ID:
         await tgbot.send_message(
             event.chat_id,
-            message=f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\n**Apa ada yang bisa saya bantu?**",
+            message=f"**hi [{OWNER}](tg://user?id={OWNER_ID})**\n**mau ngapain tod?**",
             file=ramlogo,
             buttons=[
                 (Button.inline("sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
@@ -234,8 +234,8 @@ async def alivemenu(event):
                 Button.inline("ᴀʟɪᴠᴇ ʟᴏɢᴏ", data="alvlogo"),
             ],
             [
-                Button.inline("ᴀʟɪᴠᴇ ᴛᴇᴋs", data="alvteks"),
                 Button.inline("ᴀʟɪᴠᴇ ᴇᴍᴏᴊɪ", data="alvmoji"),
+                Button.inline("ᴀʟɪᴠᴇ ᴛᴇᴋs", data="alvteks"),
             ],
             [Button.inline("« ʙᴀᴄᴋ", data="apiset")],
         ],
@@ -919,17 +919,17 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"**halo,** {mention}**!**\
-                        \n\n**saya adalah {my_first}** \
-                        \n**ada yang bisa saya bantu {mention}?**"
-        buttons = [
+            start_msg = f"greetings, {mention}\
+                        \n\nsaya adalah {my_first}\
+                        \napa ada yang bisa saya bantu {mention}?"
+            buttons = [
             (
-                Button.url("ɢʀᴏᴜᴘ ꜱᴜᴘᴘᴏʀᴛ", f"{GROUP_LINK}"),
+                Button.url("message by zar-bot", f"tg://user?id={OWNER_ID}"),
             )
         ]
     else:
-        start_msg = f"**Halo [{OWNER}](tg://user?id={OWNER_ID})**\
-            \n**Apa ada yang bisa saya bantu?**"
+        start_msg = f"**hi [{OWNER}](tg://user?id={OWNER_ID})**\
+            \n**mau ngapain tod?**"
         buttons = [
             (Button.inline("sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
             (
