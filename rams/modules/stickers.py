@@ -60,7 +60,7 @@ async def kang(args):
 
     if not message:
         return await edit_delete(
-            args, "**Reply pesannya ngentot lo anjing!**"
+            args, "**mohon reply ke media. . .**"
         )
 
     if isinstance(message.media, MessageMediaPhoto):
@@ -80,7 +80,7 @@ async def kang(args):
             in message.media.document.attributes
         ):
             emoji = message.media.document.attributes[1].alt
-            if emoji != "✨":
+            if emoji != "🏴‍☠️":
                 emojibypass = True
     elif message.file and "tgsticker" in message.file.mime_type:
         xx = await edit_or_reply(args, f"`{random.choice(KANGING_STR)}`")
@@ -101,7 +101,7 @@ async def kang(args):
             await animator(message, args, xx)
             await xx.edit(f"`{random.choice(KANGING_STR)}`")
         is_video = True
-        emoji = "✨"
+        emoji = "🏴‍☠️"
         emojibypass = True
         photo = 1
     else:
@@ -111,7 +111,7 @@ async def kang(args):
     if photo:
         splat = args.text.split()
         if not emojibypass:
-            emoji = "✨"
+            emoji = "🏴‍☠️"
         pack = 1
         if len(splat) == 3:
             pack = splat[2]
@@ -122,12 +122,12 @@ async def kang(args):
             else:
                 emoji = splat[1]
 
-        packname = f"Sticker_u{user.id}_Ke{pack}"
+        packname = f"sticker_{user.first_name}_Ke{pack}"
         if custompack is not None:
             packnick = f"{custompack}"
         else:
             f_name = f"@{user.username}" if user.username else user.first_name
-            packnick = f"Sticker Pack {f_name}"
+            packnick = f"{f_name}'s propertys"
 
         cmd = "/newpack"
         file = io.BytesIO()
@@ -175,7 +175,7 @@ async def kang(args):
                             f"@{user.username}" if user.username else user.first_name
                         )
                         packname = f"Sticker_u{user.id}_Ke{pack}"
-                        packnick = f"Sticker Pack {f_name}"
+                        packnick = f"{f_name}'s propertys"
                     await xx.edit(
                         "`Membuat Sticker Pack Baru "
                         + str(pack)
@@ -287,8 +287,8 @@ async def kang(args):
                 await args.client.send_read_acknowledge(conv.chat_id)
 
         await xx.edit(
-            "** BERHASIL MENCURI!**"
-            f"\n        ✨ **[KLIK GOBLOK](t.me/addstickers/{packname})** ✨\n**Untuk Menggunakan Stickers**",
+            "** Stiker Berhasil Dibuat**"
+            f"\n         **[KLIK DISINI](t.me/addstickers/{packname})** \n**Untuk Menggunakan Stiker**",
             parse_mode="md",
         )
 
