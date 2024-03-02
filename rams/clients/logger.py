@@ -3,20 +3,10 @@ import asyncio
 from telethon.tl.functions.channels import EditAdminRequest, InviteToChannelRequest
 from telethon.tl.types import ChatAdminRights
 
-from rams import BOT_VER as version
-from rams import CMD_HANDLER as cmd
-from rams import BOTLOG_CHATID as star
-from rams import bot, branch, tgbot
+from rams import BOTLOG_CHATID, BOTLOG_MSG as star
+from rams import bot
 
 
-MSG_ON = """
-❏ ᴢᴀʀ ᴜꜱᴇʀʙᴏᴛ ʙᴇʀʜᴀꜱɪʟ ᴅɪᴀᴋᴛɪꜰᴋᴀɴ
-╭╼┅━━━━━╍━━━━━┅╾
-├▹ ᴢᴀʀ ᴠᴇʀꜱɪᴏɴ - {} •[{}]•
-├▹ ᴜꜱᴇʀʙᴏᴛ ᴠᴇʀꜱɪᴏɴ - {}
-├▹ ᴋᴇᴛɪᴋ .ᴀʟɪᴠᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇᴄᴇᴋ ʙᴏᴛ
-╰╼┅━━━━━╍━━━━━┅╾
-"""
 
 async def ram_ubot_on():
     new_rights = ChatAdminRights(
