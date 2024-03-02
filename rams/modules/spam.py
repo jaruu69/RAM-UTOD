@@ -290,7 +290,7 @@ CMD_HELP.update(
         \n  •  **Function : **Spam kata teks demi kata.\
         \n\n  •  **Syntax :** `{cmd}picspam` <jumlah spam> <link image/gif>\
         \n  •  **Function : **Spam Foto Seolah-olah spam teks tidak cukup !!\
-        \n\n  •  **Syntax :** `{cmd}delayspam` <detik> <jumlah spam> <text>\
+        \n\n  •  **Syntax :** `{cmd}delayspam` or `{cmd}dspam` <detik> <jumlah spam> <text>\
         \n  •  **Function : **Spam surat teks dengan huruf.\
         \n\n  •  **NOTE : Spam dengan Risiko Anda sendiri**\
     "
