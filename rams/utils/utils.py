@@ -34,7 +34,7 @@ else:
 
 async def creatgr():
     LOGS.info("SEDANG MEMBUAT GRUP LOG UNTUK ANDA")
-    desc = "Group Log untuk ZAR-UBOT.\n\nDILARANG KERAS UNTUK KELUAR DARI GRUP INI!.\n\n♡ Powered By ~ @uTits ♡"
+    desc = "Group Log untuk ZAR-UBOT.\n\n♡ Powered By ~ @uTits ♡"
     try:
         grup = await bot(
             CreateChannelRequest(title="ZAR BOT LOGS", about=desc, megagroup=True)
@@ -55,7 +55,7 @@ async def autobot():
         return
     await bot.start()
     await bot.send_message(
-        BOTLOG_CHATID, "**SEDANG MEMBUAT BOT ASSISTANT DI @BOTFATHER, MOHON TUNGGU BEBERAPA SAAT SAMPAI BOT MERESTART**"
+        BOTLOG_CHATID, "**DILARANG UNTUK KELUAR DARI GRUP INI!.\n\nSEDANG MEMBUAT BOT ASSISTANT DI @BOTFATHER, MOHON TUNGGU BEBERAPA SAAT SAMPAI BOT MERESTART**"
     )
     who = await bot.get_me()
     name = who.first_name + " Assistant"
