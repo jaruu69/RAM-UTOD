@@ -3,8 +3,10 @@ import asyncio
 from telethon.tl.functions.channels import EditAdminRequest, InviteToChannelRequest
 from telethon.tl.types import ChatAdminRights
 
-from rams import BOTLOG_CHATID, BOTLOG_MSG as star
-from rams import bot
+from rams import BOT_VER as version
+from rams import CMD_HANDLER as cmd
+from rams import BOTLOG_CHATID as star
+from rams import bot, branch, tgbot
 
 
 MSG_ON = """
