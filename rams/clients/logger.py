@@ -7,6 +7,14 @@ from rams import BOTLOG_CHATID, BOTLOG_MSG as star
 from rams import bot
 
 
+MSG_ON = """
+❏ ᴢᴀʀ ᴜꜱᴇʀʙᴏᴛ ʙᴇʀʜᴀꜱɪʟ ᴅɪᴀᴋᴛɪꜰᴋᴀɴ
+╭╼┅━━━━━╍━━━━━┅╾
+├▹ ᴢᴀʀ ᴠᴇʀꜱɪᴏɴ - {} •[{}]•
+├▹ ᴜꜱᴇʀʙᴏᴛ ᴠᴇʀꜱɪᴏɴ - {}
+├▹ ᴋᴇᴛɪᴋ .ᴀʟɪᴠᴇ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇᴄᴇᴋ ʙᴏᴛ
+╰╼┅━━━━━╍━━━━━┅╾
+"""
 
 async def ram_ubot_on():
     new_rights = ChatAdminRights(
