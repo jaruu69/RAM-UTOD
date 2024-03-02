@@ -76,7 +76,7 @@ async def spam_function(event, spammer, xnxx, sleeptimem, sleeptimet, DelaySpam=
                 await event.client.send_message(
                     BOTLOG_CHATID,
                     "#DELAYSPAM\n"
-                    + f"Delay spam was executed successfully in {get_display_name(await event.get_chat())}(`{event.chat_id}`) with {counter} times with below message with delay {sleeptimet} seconds",
+                    + f"Delay spam berhasil terkirim di {get_display_name(await event.get_chat())}(`{event.chat_id}`) sebanyak {counter} kali dengan jeda waktu {sleeptimet} detik",
                 )
 
             spammer = await event.client.send_file(BOTLOG_CHATID, spammer)
@@ -119,7 +119,7 @@ async def spam_function(event, spammer, xnxx, sleeptimem, sleeptimet, DelaySpam=
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#DELAYSPAM\n"
-                + f"Delay spam was executed successfully in {get_display_name(await event.get_chat())}(`{event.chat_id}`) chat with delay {sleeptimet} seconds and with {counter} messages of \n"
+                + f"Delay spam berhasil terkirim di {get_display_name(await event.get_chat())}(`{event.chat_id}`) dengan jeda {sleeptimet} detik dan sebanyak {counter} pesan dari \n"
                 + f"`{spam_message}`",
             )
 
@@ -282,16 +282,8 @@ CMD_HELP.update(
         "spam": f"**Plugin : **`spam`\
         \n\n  •  **Syntax :** `{cmd}spam` <jumlah spam> <text>\
         \n  •  **Function : **Membanjiri teks dalam obrolan!!\
-        \n\n  •  **Syntax :** `{cmd}cspam` <text>\
-        \n  •  **Function : **Spam surat teks dengan huruf.\
-        \n\n  •  **Syntax :** `{cmd}sspam` <reply sticker>\
-        \n  •  **Function : **Spam sticker dari Seluruh isi Sticker Pack.\
-        \n\n  •  **Syntax :** `{cmd}wspam` <text>\
-        \n  •  **Function : **Spam kata teks demi kata.\
-        \n\n  •  **Syntax :** `{cmd}picspam` <jumlah spam> <link image/gif>\
-        \n  •  **Function : **Spam Foto Seolah-olah spam teks tidak cukup !!\
-        \n\n  •  **Syntax :** `{cmd}delayspam` or `{cmd}dspam` <detik> <jumlah spam> <text>\
-        \n  •  **Function : **Spam surat teks dengan huruf.\
+        \n\n  •  **Syntax :** `{cmd}delayspam or {cmd}dspam` <detik> <jumlah spam> <text> \
+        \n  •  **Function : **Spam dengan jeda waktu yang ditentukan.\
         \n\n  •  **NOTE : Spam dengan Risiko Anda sendiri**\
     "
     }
