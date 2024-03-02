@@ -164,7 +164,7 @@ async def botsettings(event):
     if event.query.user_id == OWNER_ID:
         await tgbot.send_message(
             event.chat_id,
-            message=f"**hi [{OWNER}](tg://user?id={OWNER_ID})**\n**mau ngapain tod?**",
+            message=f"**hi [{OWNER}](tg://user?id={OWNER_ID})**\n**ada yang bisa saya bantu?**",
             file=ramlogo,
             buttons=[
                 (Button.inline("sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
@@ -929,7 +929,7 @@ async def bot_start(event):
         ]
     else:
         start_msg = f"**hi [{OWNER}](tg://user?id={OWNER_ID})**\
-            \n**mau ngapain tod?**"
+            \n**ada yang bisa saya bantu?**"
         buttons = [
             (Button.inline("sᴇᴛᴛɪɴɢs ᴠᴀʀ", data="apiset"),),
             (
