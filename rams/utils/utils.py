@@ -55,7 +55,7 @@ async def autobot():
         return
     await bot.start()
     await bot.send_message(
-        BOTLOG_CHATID, "**DILARANG UNTUK KELUAR DARI GRUP INI!.\n\nSEDANG MEMBUAT BOT ASSISTANT DI @BOTFATHER, MOHON TUNGGU BEBERAPA SAAT SAMPAI BOT MERESTART**"
+        BOTLOG_CHATID, "**MOHON UNTUK TIDAK KELUAR DARI GRUP INI!.\n\nSEDANG MEMBUAT BOT ASSISTANT DI @BOTFATHER, MOHON TUNGGU BEBERAPA SAAT SAMPAI BOT MERESTART**"
     )
     who = await bot.get_me()
     name = who.first_name + " Assistant"
