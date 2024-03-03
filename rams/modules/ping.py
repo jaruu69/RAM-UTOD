@@ -17,32 +17,24 @@ from rams import CMD_HELP, BOT_VER, DEVG, REPO_NAME, StartTime, branch
 from rams.events import register
 
 gesss = [
-    "Eh ada Owner keren",
-    "Hadir ganteng 😍",
-    "Hi Tuan, kemana sj? 🤗",
-    "Hadir kak 😉",
-    "Hadir bang 😁",
-    "Hadir bang maap telat 🥺",
-    "Saya slalu ada buat Tuan Owner🥵",
-    "Jangan kemana mana lagi ya bang",
-    "Pas banget bang, aku lagi kangen",
-    "Bang owner on juga akhirnya🥵",
+    "eh iya hai bang jar",
+    "wih kemana aja nih bang?",
+    "oi bang 😁",
+    "woi bang maap telat 🥺",
+    "pas banget bang, aku lagi kangen",
+    "bangkuhhh on juga akhirnya🥵",
 ]
 
 brb = [
-    "Bang owner mau off.",
     "Jangan off dong bang.",
     "Bang, mau kemana?",
     "Jangan lama lama bang",
     "Siap bang.",
     "Yah udah off aja bang.",
-    "Off lagi, mau ngewe ya?",
-    "Bang developer, lagi ange kah? ",
     "Jangan lupa makan bang.",
     "Yah pasti mao bucin ni.",
     "Jangan off terus lah bang.",
     "Mau nonton bokep kah?",
-    "Bang Ganteng telah off.",
 ]
 
 async def get_readable_time(seconds: int) -> str:
@@ -70,12 +62,12 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(incoming=True, from_users=DEVG, pattern=r"^gesss$")
+@register(incoming=True, from_users=DEVG, pattern=r"^p$")
 async def _(landak):
     await landak.reply(random.choice(gesss))
 
 
-@register(incoming=True, from_users=DEVS, pattern=r"^.brb$")
+@register(incoming=True, from_users=DEVS, pattern=r"^brb$")
 async def _(landak):
     await landak.reply(random.choice(brb))
 
@@ -144,9 +136,9 @@ async def redis(pong):
     duration = (end - start).microseconds / 1000
     user= await pong.client.get_me()
     await pong.reply(
-            f"**♡ [{user.first_name}-ubot](tg://user?id={user.id}) ♡**\n\n" 
-            f"**ᴘɪɴɢᴇʀ :** `%sms`\n"
-            f"**ᴜᴘᴛɪᴍᴇ :** {uptime}" % (duration)
+            f"**♡ [{user.first_name}-ubot](tg://user?id={user.id})**\n\n" 
+            f"**♡ ᴘɪɴɢᴇʀ :** `%sms`\n"
+            f"**♡ ᴜᴘᴛɪᴍᴇ :** {uptime}" % (duration)
     )
 
 @ram_cmd(pattern="speed$")
