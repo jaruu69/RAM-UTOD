@@ -95,7 +95,7 @@ async def _(ping):
     user = await ping.client.get_me()
     await ping.client.send_message(
         ping.chat_id, f"**♡ ᴢᴀʀ ᴘɪɴɢ** `%sms`\n"
-                    f"**♡ ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n" % (duration), reply_to=ping.reply_to_msg_id)
+                    f"**♡ ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n" % (duration), reply_to=ping.reply_to_msg_id)
     await ping.delete()
 
 @ram_cmd(pattern="piw$")
@@ -181,6 +181,8 @@ def speed_convert(size):
 
 
 CMD_HELP.update({
-    "ping": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` or `{cmd}piw` or `{cmd}pong`\
+    "ping": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` | `{cmd}piw` | `{cmd}pong`\
          \n↳ : Untuk Menunjukkan Ping Bot Anda."
+         f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}zar`\
+         \n↳ : Untuk Menunjukkan Bot Anda Hidup."
 })
