@@ -282,7 +282,7 @@ CMD_HELP.update(
         "spam": f"**Plugin : **`spam`\
         \n\n  •  **Syntax :** `{cmd}spam` <jumlah spam> <text>\
         \n  •  **Function : **Membanjiri teks dalam obrolan!!\
-        \n\n  •  **Syntax :** `{cmd}delayspam or {cmd}dspam` <detik> <jumlah spam> <text> \
+        \n\n  •  **Syntax :** `{cmd}delayspam` or `{cmd}dspam` <detik> <jumlah spam> <text> \
         \n  •  **Function : **Spam dengan jeda waktu yang ditentukan.\
         \n\n  •  **NOTE : Spam dengan Risiko Anda sendiri**\
     "
