@@ -95,7 +95,7 @@ async def autobot():
     await bot.send_read_acknowledge("botfather")
     if isdone.startswith("Sorry,"):
         ran = randint(1, 100)
-        username = "Asisstant" + (str(who.id))[6:] + str(ran) + "Bot"
+        username = who.first_name + (str(who.id))[6:] + str(ran) + "bot"
         await bot.send_message(bf, username)
         await asyncio.sleep(1)
         nowdone = (await bot.get_messages(bf, limit=1))[0].text
