@@ -122,7 +122,7 @@ async def _(pong):
 @ram_cmd(pattern="pong$")
 async def redis(pong):
     """For .ping command, ping the rams from any chat."""
-    await get_readable_time((time.time() - StartTime))
+    uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     ram = await edit_or_reply(pong, "**✧**")
     await ram.edit("**✧✧**")
