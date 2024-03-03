@@ -181,8 +181,9 @@ def speed_convert(size):
 
 
 CMD_HELP.update({
-    "ping": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` | `{cmd}piw` | `{cmd}pong`\
-         \n↳ : Untuk Menunjukkan Ping Bot Anda."
-         f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}zar`\
-         \n↳ : Untuk Menunjukkan Bot Anda Hidup."
+    "ping":
+    f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` | `{cmd}piw` | `{cmd}pong`\
+\n↳ : Untuk Menunjukkan Ping Bot Anda.\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}alive`\
+\n↳ : Untuk Menunjukkan Bot Anda Hidup."
 })
