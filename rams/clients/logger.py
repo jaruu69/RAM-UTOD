@@ -9,11 +9,11 @@ from rams import CMD_HANDLER as cmd
 from rams import bot, tgbot
 
 MSG_ON = """
-❏ **Zar-Userbot Berhasil Di Aktifkan**
-━━
-➠ **Userbot Version -** `{}`
-➠ **Ketik** `{}help ping` **untuk mengecek bot**
-━━
+╭┈ **Zar-Userbot Berhasil Di Aktifkan**
+│
+│ **Userbot Version -** `{}`
+│ **Ketik** `{}help ping` **untuk mengecek bot**
+╰────────✬
 """
 
 
