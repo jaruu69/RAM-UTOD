@@ -222,7 +222,7 @@ async def pipcheck(pip):
 
 
 @ram_cmd(pattern=r"(?:zar|zbot)\s?(.)?")
-@register(pattern=r"^\.(?:czr|on)\s?(.)?", sudo=True)
+@register(pattern=r"^\.(?:zr|on)\s?(.)?", sudo=True)
 async def amireallyalive(alive):
     user = await alive.client.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
