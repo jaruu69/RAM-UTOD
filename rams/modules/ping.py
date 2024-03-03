@@ -19,10 +19,10 @@ from rams.events import register
 gesss = [
     "eh iya hai bang jar",
     "wih kemana aja nih bang?",
-    "oi bang 😁",
+    "oi bang jar 😁",
     "woi bang maap telat 🥺",
     "pas banget bang, aku lagi kangen",
-    "bangkuhhh on juga akhirnya🥵",
+    "abangkuhhh jar on juga akhirnya🥵",
 ]
 
 brb = [
