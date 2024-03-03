@@ -129,16 +129,13 @@ async def redis(pong):
     await ram.edit("**✧✧✧**")
     await ram.edit("**✧✧✧✧**")
     await ram.edit("**✧✧✧✧✧**")
-    await asyncio.sleep(2)
-    await ram.edit("⚡️")
-    await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user= await pong.client.get_me()
     await pong.reply(
-            f"**♡ [{user.first_name}-ubot](tg://user?id={user.id})**\n\n" 
+            f"**♡ {user.first_name}-ubot**\n" 
             f"**♡ ᴘɪɴɢᴇʀ :** `%sms`\n"
-            f"**♡ ᴜᴘᴛɪᴍᴇ :** {uptime}" % (duration)
+            f"**♡ ᴜᴘᴛɪᴍᴇ :** `{uptime}`" % (duration)
     )
 
 @ram_cmd(pattern="speed$")
@@ -184,9 +181,6 @@ def speed_convert(size):
 
 
 CMD_HELP.update({
-    "ping": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` or `{cmd}rping` or `{cmd}pink`\
-         \n↳ : Untuk Menunjukkan Ping Bot Anda.\
-         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}speed`\
-         \n↳ : Untuk Menunjukkan Kecepatan Jaringan Anda.\
-         \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}pong`\
-         \n↳ : Sama Seperti Perintah {cmd}pink."})
+    "ping": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` or `{cmd}piw` or `{cmd}pong`\
+         \n↳ : Untuk Menunjukkan Ping Bot Anda."
+})
