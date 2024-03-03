@@ -55,7 +55,7 @@ async def autobot():
         return
     await bot.start()
     await bot.send_message(
-        BOTLOG_CHATID, "**MOHON UNTUK TIDAK KELUAR DARI GRUP INI!.\n\nSEDANG MEMBUAT BOT ASSISTANT DI @BOTFATHER, MOHON TUNGGU BEBERAPA SAAT SAMPAI BOT MERESTART**"
+        BOTLOG_CHATID, "**MOHON UNTUK TIDAK KELUAR DARI GRUP INI!\n\nSEDANG MEMBUAT BOT ASSISTANT DI @BOTFATHER, MOHON TUNGGU BEBERAPA SAAT SAMPAI BOT MERESTART**"
     )
     who = await bot.get_me()
     name = who.first_name + " Assistant"
@@ -154,12 +154,6 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_file(bf, "rams/utils/styles/jarsist.png")
-        await asyncio.sleep(3)
-        await bot.send_message(bf, "/setabouttext")
-        await asyncio.sleep(1)
-        await bot.send_message(bf, f"@{username}")
-        await asyncio.sleep(1)
-        await bot.send_message(bf, f"Assistant punya si {who.first_name}")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setdescription")
         await asyncio.sleep(1)
