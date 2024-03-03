@@ -88,8 +88,9 @@ async def _(ping):
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
     await ping.reply(
-            f"**❏ ᴢᴀʀ ᴘɪɴɢ**\n"
-            f"`%sms`" % (duration)
+            f"**♡ ᴘɪɴɢ** `%sms`\n"
+            f"**♡ ᴜᴘᴛɪᴍᴇ** `{uptime}`\n"
+            f"**♡ —ɪ'ᴍ [{user.first_name}](tg://user?id={user.id})**" % (duration)
     )
 
 @register(pattern=r"^\.jping(?: |$)(.*)", sudo=True)
@@ -105,86 +106,47 @@ async def _(ping):
                     f"**♡ ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n" % (duration), reply_to=ping.reply_to_msg_id)
     await ping.delete()
 
-@ram_cmd(pattern="rping$")
+@ram_cmd(pattern="piw$")
 async def _(pong):
     """For .ping command, ping the rams from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    ram = await edit_or_reply(pong, "**Mengecek Sinyal...**")
-    await ram.edit("**▁**")
-    await ram.edit("**▁ ▂**")
-    await ram.edit("**▁ ▂ ▄**")
-    await ram.edit("**▁ ▂ ▄ ▅**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆ ▇**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆ ▇ █**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆ ▇**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆**")
-    await ram.edit("**▁ ▂ ▄ ▅ **")
-    await ram.edit("**▁ ▂ ▄**")
-    await ram.edit("**▁ ▂**")
-    await ram.edit("**▁**")
-    await ram.edit("**▁ ▂**")
-    await ram.edit("**▁ ▂ ▄**")
-    await ram.edit("**▁ ▂ ▄ ▅**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆ ▇**")
-    await ram.edit("**▁ ▂ ▄ ▅ ▆ ▇ █**")
-    await asyncio.sleep(1)
-    await ram.edit("✨")
-    await asyncio.sleep(3)
+    ram = await edit_or_reply(pong, "**pinging...**")
+    await ram.edit("** ˗ˏˋ❀ ping ❀ ˎˊ˗ **")
+    await ram.edit("** ˗ˏˋ❀❀ ping ❀❀ ˎˊ˗ **")
+    await ram.edit("** ˗ˏˋ❀❀❀ ping ❀❀❀ ˎˊ˗ **")
+    await ram.edit("** ˗ˏˋ❀❀ ping ❀❀ ˎˊ˗ **")
+    await ram.edit("** ˗ˏˋ❀ ping ❀ ˎˊ˗ **")
+    await ram.edit("**ꕤ PIW PIW!!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
-    await pong.client.send_message(
-        pong.chat_id, f"**🌟𝗝𝗔𝗥-𝗨𝗕𝗢𝗧🌟**\n"
-                     f"** ➠  Sɪɢɴᴀʟ   :** "
-                     f"`%sms` \n"
-                     f"** ➠  Bᴏᴛᴠᴇʀ  :** "
-                     f"`{BOT_VER}` \n"
-                     f"** ➠  Uᴘᴛɪᴍᴇ  :** "
-                     f"`{uptime}` \n"
-                     f"** ➠  Oᴡɴᴇʀ   :** [{user.first_name}](tg://user?id={user.id})" % (duration), reply_to=pong.reply_to_msg_id)
-    await pong.delete()
+    await pong.reply(
+                f"**♡ ᴘɪᴡ :** `%sms`\n"
+                f"**├ ᴜᴘᴛɪᴍᴇ :** `{uptime}`\n"
+                f"**╰ ᴜꜱᴇʀ :** [{user.first_name}](tg://user?id={user.id})"% (duration)
+    )
 
-@ram_cmd(pattern="pink$")
+@ram_cmd(pattern="pong$")
 async def redis(pong):
     """For .ping command, ping the rams from any chat."""
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    ram = await edit_or_reply(pong, "**𓀐.....................................𓂸**")
-    await ram.edit("**𓀐..................................𓂸..**")
-    await ram.edit("**𓀐................................𓂸....**")
-    await ram.edit("**𓀐..............................𓂸......**")
-    await ram.edit("**𓀐............................𓂸........**")
-    await ram.edit("**𓀐..........................𓂸..........**")
-    await ram.edit("**𓀐.......................𓂸.............**")
-    await ram.edit("**𓀐.....................𓂸...............**")
-    await ram.edit("**𓀐...................𓂸.................**")
-    await ram.edit("**𓀐..................𓂸..................**")
-    await ram.edit("**𓀐................𓂸....................**")
-    await ram.edit("**𓀐..............𓂸......................**")
-    await ram.edit("**𓀐............𓂸........................**")
-    await ram.edit("**𓀐..........𓂸..........................**")
-    await ram.edit("**𓀐........𓂸............................**")
-    await ram.edit("**𓀐.......𓂸.............................**")
-    await ram.edit("**𓀐....𓂸...............................**")
-    await ram.edit("**𓀐..𓂸.................................**")
-    await ram.edit("**𓀐.𓂸..................................**")
-    await ram.edit("**𓀐𓂸...................................**")
-    await ram.edit("**𓀐.𓂸..................................**")
-    await ram.edit("**𓀐𓂸...................................**")
-    await ram.edit("**𓀐.𓂸..................................**")
-    await ram.edit("**𓂺**")
+    ram = await edit_or_reply(pong, "**✧**")
+    await ram.edit("**✧✧**")
+    await ram.edit("**✧✧✧**")
+    await ram.edit("**✧✧✧✧**")
+    await ram.edit("**✧✧✧✧✧**")
+    await asyncio.sleep(2)
+    await ram.edit("⚡️")
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user= await pong.client.get_me()
     await pong.reply(
-            f"**🌟𝗝𝗔𝗥-𝗨𝗕𝗢𝗧🌟**\n" 
-            f"**➾ OWNER     :** [{user.first_name}](tg://user?id={user.id}) \n"
-            f"**➾ Kecepatan : ** `%sms`  \n"
-            f"**➾ Branch    : ** [{branch}] \n" % (duration)
+            f"**♡ [{user.first_name}-ubot](tg://user?id={user.id}) ♡**\n\n" 
+            f"**ᴘɪɴɢᴇʀ :** `%sms`\n"
+            f"**ᴜᴘᴛɪᴍᴇ :** {uptime}" % (duration)
     )
 
 @ram_cmd(pattern="speed$")
@@ -227,28 +189,7 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@ram_cmd(pattern="pong$")
-async def pingme(pong):
-    """For .ping command, ping the rams from any chat."""
-    start = datetime.now()
-    ram = await edit_or_reply(pong, "`Pong...........🐎`")
-    await ram.edit("`Pong..........🐎.`")
-    await ram.edit("`Pong.........🐎..`")
-    await ram.edit("`Pong........🐎...`")
-    await ram.edit("`Pong.......🐎....`")
-    await ram.edit("`Pong......🐎.....`")
-    await ram.edit("`Pong.....🐎......`")
-    await ram.edit("`Pong....🐎.......`")
-    await ram.edit("`Pong...🐎........`")
-    await ram.edit("`Pong..🐎.........`")
-    await ram.edit("`Pong.🐎..........`")
-    await ram.edit("`Pong🐎...........`")
-    end = datetime.now()
-    duration = (end - start).microseconds / 9000
-    user= await pong.client.get_me()
-    await pong.client.send_message(
-        pong.chat_id, f"**✨Oᴡɴᴇʀ : [{user.first_name}](tg://user?id={user.id})**\n📗 `%sms`" % (duration), reply_to=pong.reply_to_msg_id)
-    await pong.delete()
+
 
 CMD_HELP.update({
     "ping": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` or `{cmd}rping` or `{cmd}pink`\
