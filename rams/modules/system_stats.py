@@ -221,41 +221,37 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@ram_cmd(pattern=r"(?:alive|on)\s?(.)?")
+@ram_cmd(pattern=r"(?:zar|zbot)\s?(.)?")
+@register(pattern=r"^\.(?:czr|on)\s?(.)?", sudo=True)
 async def amireallyalive(alive):
     user = await alive.client.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
     output = (
-        f"**♡ [ZAR-UBOT](tg://user?id={user.id}) Update dan berjalan.**\n\n"
+        f"⛧ **{user.first_name}-Bot is Alive.** ⛧\n\n"
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
-        f"       **Hey bro, I am {user.first_name}.**\n"
+        f"    ⛧ **Hey bro, i am [{user.first_name}](tg://user?id={user.id})** ⛧\n"
         f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
-        f"{emo} **Master :** [{user.first_name}](tg://user?id={user.id}) \n"
-        f"{emo} **Modules :** `{len(modules)} Modules` \n"
+        f"{emo} **Tuan :** [{user.first_name}](tg://user?id={user.id}) \n"
+        f"{emo} **Username :** @{user.username} \n"
         f"{emo} **Bot Version :** `{BOT_VER}` \n"
-        f"{emo} **Python Version :** `{python_version()}` \n"
-        f"{emo} **Pytgcalls Version :** `{pytgcalls.__version__}` \n"
-        f"{emo} **Telethon Version :** `{version.__version__}` \n"
         f"{emo} **Bot Uptime :** `{uptime}` \n"
-        f"{emo} **Branch     :** `[{branch}]` \n"
-        f"    ♡ **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁]({GROUP_LINK})** | **[𝗢𝘄𝗻𝗲𝗿](tg://user?id={user.id})** ♡\n"
+        f"{emo} **Modules :** `{len(modules)} Modules` \n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰"
     )
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
-            await alive.delete()
             msg = await bot.send_file(alive.chat_id, logo, caption=output)
             await asyncio.sleep(50)
         except BaseException:
-            await alive.edit(
+            await alive.reply(
                 output + "\n\n *`The provided logo is invalid."
                 "\nMake sure the link is directed to the logo picture`"
             )
             await asyncio.sleep(100)
     else:
-        await alive.edit(output)
+        await alive.reply(output)
         await asyncio.sleep(100)
 
 @ram_cmd(pattern=r"(?:zalive|zon)\s?(.)?")
@@ -292,8 +288,7 @@ async def amireallyalive(alive):
         await asyncio.sleep(100)
 
 
-@ram_cmd(pattern=r"(?:zar|zarbot)\s?(.)?")
-@register(pattern=r"^\.(?:clive|on)\s?(.)?", sudo=True)
+@register(pattern=r"^\.(?:clive|con)\s?(.)?", sudo=True)
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -341,7 +336,7 @@ async def amireallyalive(alive):
 @ram_cmd(pattern=r"aliveu")
 async def amireallyaliveuser(username):
     message = username.text
-    output = ".aliveu [new user without brackets] nor can it be empty"
+    output = ".aliveu ur name nor can it be empty"
     if message != ".aliveu" and message[7:8] == " ":
         newuser = message[8:]
         global DEFAULTUSER
@@ -359,20 +354,10 @@ async def amireallyalivereset(ureset):
 
 CMD_HELP.update({
     "sistem":
-    f"`{cmd}sysd`\
-\nUsage: Shows system information using neofetch.\
-\n\n`{cmd}botver`\
-\nUsage: Shows the rams version.\
-\n\n`{cmd}pip` <module(s)>\
-\nUsage: Does a search of pip modules(s).\
-\n\n`{cmd}start`\
-\nUsage: Type .start to see whether your bot is working or not.\
+    f"`{cmd}zar` | `{cmd}`zbot\
+\nUsage: To check your bot is alive.\
 \n\n`{cmd}aliveu` <text>\
 \nUsage: Changes the 'user' in alive to the text you want.\
 \n\n`{cmd}resetalive`\
-\nUsage: Resets the user to default.\
-\n\n`{cmd}db`\
-\nUsage:Shows database related info.\
-\n\n`{cmd}spc`\
-\nUsage:Show system specification."
+\nUsage: Reset the user to default."
 })
