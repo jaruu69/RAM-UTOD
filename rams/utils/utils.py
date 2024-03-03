@@ -34,10 +34,10 @@ else:
 
 async def creatgr():
     LOGS.info("SEDANG MEMBUAT GRUP LOG UNTUK ANDA")
-    desc = "Group Log untuk ZAR-UBOT.\n\n♡ Powered By ~ @uTits ♡"
+    desc = "Grup Log untuk ZAR-UBOT\n\n♡ Powered By ~ @uTits ♡"
     try:
         grup = await bot(
-            CreateChannelRequest(title="ZAR BOT LOGS", about=desc, megagroup=True)
+            CreateChannelRequest(title="ZAR BOT LOGS | DON'T LEFT THIS GROUP", about=desc, megagroup=True)
         )
         grup_id = grup.chats[0].id
     except Exception as e:
