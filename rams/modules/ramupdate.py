@@ -18,14 +18,14 @@ from rams.utils import edit_delete, edit_or_reply, ram_cmd
 async def gen_chlog(repo, diff):
     d_form = "%d/%m/%y"
     return "".join(
-        f"• [{c.committed_datetime.strftime(d_form)}]: {c.summary} <{c.author}>\n"
+        f"♡ [{c.committed_datetime.strftime(d_form)}]: {c.summary} <{c.author}>\n"
         for c in repo.iter_commits(diff)
     )
 
 
 async def print_changelogs(xx, ac_br, changelog):
     changelog_str = (
-        f"**✨ Tersedia Perapdetan ZAR-UBOT :\n\n✨ Berikut ini Adalah Modules Yang harus Anda Apdet:**\n`{changelog}`"
+        f"**ada apdet baru ni gais, coba `{cmd}apdet dulu` sana:**\n\n`{changelog}`"
     )
     if len(changelog_str) > 4096:
         await edit_or_reply(xx, "**Udah lama ga apdet lo, Nih gua kasih file bokep.**")
