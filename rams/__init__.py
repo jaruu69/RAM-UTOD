@@ -681,7 +681,7 @@ with bot:
                 result = builder.photo(
                     file=ramlogo,
                     link_preview=False,
-                    text=f"**♡ ZAR - UBOT MENU ♡**\n\n♡  **Owner** [{user.first_name}](tg://user?id={user.id})\n♡  **Jumlah** `{len(dugmeler)}` Modules",
+                    text=f"**♡ ZAR - UBOT MENU ♡**\n\n      **♡  Prefixes:** `{CMD_HANDLER}`\n      **♡  Module:** `{len(dugmeler)}`",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
@@ -759,7 +759,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**♡ ZAR - UBOT MENU ♡**\n\n♡ **Owner** [{user.first_name}](tg://user?id={user.id})\n♡ **Jumlah** `{len(dugmeler)}` Module"
+                text=f"**♡ ZAR - UBOT MENU ♡**\n\n      **♡  Prefixes:** `{CMD_HANDLER}`\n      **♡  Module:** `{len(dugmeler)}`",
                 await event.edit(
                     text,
                     file=ramlogo,
