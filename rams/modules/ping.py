@@ -103,13 +103,6 @@ async def _(pong):
     """For .ping command, ping the rams from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    ram = await edit_or_reply(pong, "**pinging...**")
-    await ram.edit("** ˗ˏˋ❀ ping ❀ ˎˊ˗ **")
-    await ram.edit("** ˗ˏˋ❀❀ ping ❀❀ ˎˊ˗ **")
-    await ram.edit("** ˗ˏˋ❀❀❀ ping ❀❀❀ ˎˊ˗ **")
-    await ram.edit("** ˗ˏˋ❀❀ ping ❀❀ ˎˊ˗ **")
-    await ram.edit("** ˗ˏˋ❀ ping ❀ ˎˊ˗ **")
-    await ram.edit("**ꕤ PIW PIW!!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
@@ -184,6 +177,6 @@ CMD_HELP.update({
     "ping":
     f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}ping` | `{cmd}piw` | `{cmd}pong`\
 \n↳ : Untuk Menunjukkan Ping Bot Anda.\
-\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}zar`\
+\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}zar` | `{cmd}helpz`\
 \n↳ : Untuk Menunjukkan Bot Anda Hidup."
 })
