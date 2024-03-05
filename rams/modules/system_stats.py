@@ -229,7 +229,7 @@ async def amireallyalive(alive):
     output = (
         f"⛧ **{user.first_name}-Bot is Alive.** ⛧\n\n"
         f"**╭✠╼━━━━━━❖━━━━━━━✠╮**\n"
-        f"    ⛧ **Hey bro, i am [{user.first_name}](tg://user?id={user.id})** ⛧\n"
+        f"      ⛧ **Hey bro, i am [{user.first_name}](tg://user?id={user.id})** ⛧\n"
         f"**╰✠╼━━━━━━❖━━━━━━━✠╯**\n\n"
         f"▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰\n"
         f"{emo} **Tuan :** [{user.first_name}](tg://user?id={user.id}) \n"
