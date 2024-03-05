@@ -26,7 +26,7 @@ from rams import bot
 from rams.utils import edit_or_reply, ram_cmd
 
 
-@ram_cmd(pattern="zhelp")
+@ram_cmd(pattern="helpz")
 async def _(event):
     if event.fwd_from:
         return
