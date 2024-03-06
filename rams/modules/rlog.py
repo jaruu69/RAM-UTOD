@@ -200,10 +200,10 @@ async def set_gruplog(event):
         GRUPLOG = True
     if GRUPLOG:
         if h_type:
-            await event.edit("**Group Log Lu udah idup kontoll!!!**")
+            await event.edit("**Tag Group Diaktifkan.**")
         else:
             addgvar("GRUPLOG", h_type)
-            await event.edit("**Group Log Udah mati ngentod!!!**")
+            await event.edit("**Tag Group Dimatikan.**")
     elif h_type:
         addgvar("GRUPLOG", h_type)
         await event.edit("**Group Log Sudah aktif, Awas Ada talent minta Vn desah masuk!!!**")
