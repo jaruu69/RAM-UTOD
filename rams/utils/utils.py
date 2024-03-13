@@ -34,7 +34,7 @@ else:
 
 async def creatgr():
     LOGS.info("SEDANG MEMBUAT GRUP LOG UNTUK ANDA")
-    desc = "Grup Log untuk ZAR-UBOT\n\n♡ Powered By ~ @uTits ♡"
+    desc = "Grup Log untuk ZAR-UBOT\n\n♡ Powered By ~ @doggyi ♡"
     try:
         grup = await bot(
             CreateChannelRequest(title="ZAR BOT LOGS | DON'T LEFT THIS GROUP", about=desc, megagroup=True)
@@ -111,7 +111,7 @@ async def autobot():
             await asyncio.sleep(1)
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
-            await bot.send_file(bf, "rams/utils/styles/jarsist.png")
+            await bot.send_file(bf, "rams/utils/styles/zar1.png")
             await asyncio.sleep(3)
             await bot.send_message(bf, "/setabouttext")
             await asyncio.sleep(1)
@@ -124,7 +124,7 @@ async def autobot():
             await bot.send_message(bf, f"@{username}")
             await asyncio.sleep(1)
             await bot.send_message(
-                bf, f"ﾒ Owner ~ {who.first_name} ﾒ\n\nﾒ Powered By ~ @uTits ﾒ"
+                bf, f"ﾒ Owner ~ {who.first_name} ﾒ\n\nﾒ Powered By ~ @doggyi ﾒ"
             )
             await bot.send_message(
                 BOTLOG_CHATID,
@@ -153,14 +153,14 @@ async def autobot():
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
-        await bot.send_file(bf, "rams/utils/styles/jarsist.png")
+        await bot.send_file(bf, "rams/utils/styles/zar1.png")
         await asyncio.sleep(3)
         await bot.send_message(bf, "/setdescription")
         await asyncio.sleep(1)
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"♡ Owner ~ {who.first_name} ♡\n\n♡ Powered By ~ @uTits ♡"
+            bf, f"♡ Owner ~ {who.first_name} ♡\n\n♡ Powered By ~ @doggyi ♡"
         )
         await bot.send_message(
             BOTLOG_CHATID,
