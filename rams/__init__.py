@@ -286,11 +286,11 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/ede85cdc47477c15d1895.png"
+    "ALIVE_LOGO") or "https://telegra.ph/file/b579df2b4b77538e17af5.png"
 
 # Default .helpme logo
 HELP_LOGO = os.environ.get(
-   "HELP_LOGO") or "https://telegra.ph/file/a964dad35c6c7fb999e46.png"
+   "HELP_LOGO") or "https://telegra.ph/file/31a155af7b5012dae9609.png"
 
 # Default .alive Instagram
 IG_ALIVE = os.environ.get("IG_ALIVE", None)
@@ -314,7 +314,7 @@ GROUP_LINK = os.environ.get(
 
 # Default .repo Bot
 OWNER_BOT = os.environ.get(
-    "OWNER_BOT") or "t.me/utits"
+    "OWNER_BOT") or "t.me/doggyi"
 
 # CH sfs bot
 CH_SFS = os.environ.get("CH_SFS") or "t.me/lickhing"
