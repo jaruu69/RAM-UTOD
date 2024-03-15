@@ -736,7 +736,7 @@ with bot:
             else:
                 result = builder.article(
                     title="♡ ZAR - UBOT ♡",
-                    description="USERBOT BY @UTiTS",
+                    description="USERBOT BY @DOGGYi",
                     url="https://t.me/jarsuprot",
                     thumb=InputWebDocument(HELP_LOGO, 0, "image/jpeg", []),
                     text=f"**♡ ZAR - UBOT ♡**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode:** [{user.first_name}](tg://user?id={user.id})\n**Assistant:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**Support:** @jarsuprot\n➖➖➖➖➖➖➖➖➖➖",
@@ -744,7 +744,7 @@ with bot:
                         [
                             custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/jarsuprot"),
                             custom.Button.url(
-                                "ᴏᴡɴᴇʀ", "https://t.me/utits"
+                                "ᴏᴡɴᴇʀ", "https://t.me/doggyi"
                              ),
                         ],
                     ],
