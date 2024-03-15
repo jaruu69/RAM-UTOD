@@ -160,7 +160,7 @@ async def autobot():
         await bot.send_message(bf, f"@{username}")
         await asyncio.sleep(1)
         await bot.send_message(
-            bf, f"♡ Owner ~ {who.first_name} ♡\n\n♡ Powered By ~ @doggyi ♡"
+            bf, f"hai, i'm {who.first_name} assistant.\n\n♡ Userbot By ~ @doggyi ♡"
         )
         await bot.send_message(
             BOTLOG_CHATID,
