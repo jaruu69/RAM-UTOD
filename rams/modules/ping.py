@@ -17,12 +17,12 @@ from rams import CMD_HELP, BOT_VER, DEVG, REPO_NAME, StartTime, branch
 from rams.events import register
 
 gesss = [
+    "abangkuhhh jar on juga akhirnya🥵",
     "eh iya hai bang jar",
     "wih kemana aja nih bang?",
     "oi bang jar 😁",
     "woi bang maap telat 🥺",
     "pas banget bang, aku lagi kangen",
-    "abangkuhhh jar on juga akhirnya🥵",
 ]
 
 brb = [
