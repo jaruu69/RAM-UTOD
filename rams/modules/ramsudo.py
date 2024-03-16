@@ -9,7 +9,7 @@ from rams.utils import edit_delete, edit_or_reply, ram_cmd
 
 Heroku = heroku3.from_key(HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
-sudousers = os.environ.get("SUDO_USERS") or "5185945994"
+sudousers = os.environ.get("SUDO_USERS") or "1478997683"
 
 
 @ram_cmd(pattern="sudo$")
