@@ -21,8 +21,8 @@ DEF_UNAPPROVED_MSG = (
     f"Saya adalah Asisten yang menjaga Room Chat Ini.\n"
     f"Jangan Spam Atau Anda Akan Diblokir Otomatis.\n\n"
     "╭✠╼━━━━━━❖━━━━━━━✠╮\n"
-    "┣[• 𝐁𝐎𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄\n"
-    "┣[• 𝐁𝐘 [⭐️𝐉𝐀𝐑-𝐔𝐁𝐎𝐓⭐️](https://t.me/doggyi)\n"
+    "┣• 𝐁𝐎𝐓 𝐌𝐄𝐒𝐒𝐀𝐆𝐄\n"
+    "┣• 𝐁𝐘 [⭐️𝐉𝐀𝐑-𝐔𝐁𝐎𝐓⭐️](https://t.me/doggyi)\n"
     "╰✠╼━━━━━━❖━━━━━━━✠╯"
 )
 
