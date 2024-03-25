@@ -26,15 +26,14 @@ gesss = [
 ]
 
 brb = [
-    "Jangan off dong bang.",
-    "Bang, mau kemana?",
-    "Jangan lama lama bang",
-    "Siap bang.",
-    "Yah udah off aja bang.",
-    "Jangan lupa makan bang.",
-    "Yah pasti mao bucin ni.",
-    "Jangan off terus lah bang.",
-    "Mau nonton bokep kah?",
+    "jangan off dong bang.",
+    "bang, mau kemana?",
+    "siap bang.",
+    "yah udah off aja bang.",
+    "jangan lupa makan bang.",
+    "yah pasti mao bucin ni.",
+    "jangan off terus lah bang.",
+    "mau nonton bokep kah?",
 ]
 
 async def get_readable_time(seconds: int) -> str:
@@ -67,7 +66,7 @@ async def _(landak):
     await landak.reply(random.choice(gesss))
 
 
-@register(incoming=True, from_users=DEVS, pattern=r"^brb$")
+@register(incoming=True, from_users=DEVS, pattern=r"^uyy$")
 async def _(landak):
     await landak.reply(random.choice(brb))
 
