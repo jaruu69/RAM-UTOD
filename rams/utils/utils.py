@@ -168,7 +168,7 @@ async def autobot():
         )
         await bot.send_message(
             BOTLOG_CHATID,
-            "**Tunggu Sebentar, Sedang MeRestart Heroku untuk Menerapkan Perubahan.**",
+            "**Tunggu Sebentar, Sedang MeRestart ubot untuk menerapkan perubahan.**",
         )
         heroku_var["BOT_TOKEN"] = token
         heroku_var["BOT_USERNAME"] = f"@{username}"
