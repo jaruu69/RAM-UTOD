@@ -15,7 +15,8 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-
+import aiohfiles
+import aiohttp
 import asyncio
 import hashlib
 import os
@@ -42,6 +43,7 @@ from yt_dlp import YoutubeDL
 from rams import LOGS, SUDO_USERS, bot
 from rams.utils.format import md_to_text, paste_message
 
+from .FastTelethon import download_file as downloadable
 
 def deEmojify(inputString):
     return get_emoji_regexp().sub("", inputString)
@@ -425,3 +427,15 @@ def download_lagu(url: str) -> str:
     info = ydl.extract_info(url, download=False)
     ydl.download([url])
     return os.path.join("downloads", f"{info['id']}.{info['ext']}")
+
+async def download_file(link, name):
+    """for files, without progress callback with aiohttp"""
+    if not aiohttp:
+        urlretrieve(link, name)
+        return name
+    async with aiohttp.ClientSession() as ses:
+        async with ses.get(link) as re_ses:
+            file = await aiofiles.open(name, "wb")
+            await file.write(await re_ses.read())
+            await file.close()
+    return name
