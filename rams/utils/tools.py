@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import aiohfiles
+import aiofiles
 import aiohttp
 import asyncio
 import hashlib
