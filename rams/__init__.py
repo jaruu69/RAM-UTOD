@@ -588,7 +588,6 @@ with bot:
 
 with bot:
     try:
-        bot(Y("@daddyystore"))
         bot(Y("@jarsuprot"))
     except BaseException:
         pass
