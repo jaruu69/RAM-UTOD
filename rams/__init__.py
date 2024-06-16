@@ -150,7 +150,7 @@ if not OWNDEV:
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
 
 # SQL Database URI
-DB_URI = os.environ.get("DATABASE_URL", None)
+DB_URI = os.environ.get("DATABASE_URL", "postgres://lqflpxpg:HNHkF8fsy31K_qNjsGqomMlEL7LIMtWs@raja.db.elephantsql.com/lqflpxpg")
 
 # OCR API key
 OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
